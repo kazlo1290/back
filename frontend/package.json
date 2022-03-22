@@ -1,6 +1,7 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "colorfully",
+  "version": "1.0.0",
+  "description": "colorfully",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",

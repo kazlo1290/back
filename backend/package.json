@@ -1,7 +1,7 @@
 {
-  "name": "first-mern-app",
+  "name": "colorfully",
   "version": "1.0.0",
-  "description": "Goalsetter App",
+  "description": "colorfully",
   "main": "server.js",
   "scripts": {
     "start": "node  backend/server.js",

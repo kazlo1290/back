@@ -1,6 +1,7 @@
 {
-  "name": "kazlo1",
-  "version": "0.1.0",
+  "name": "colorfully",
+  "version": "1.0.0",
+  "description": "colorfully",
   "private": true,
   "dependencies": {
     "@mui/material": "^5.5.1",
