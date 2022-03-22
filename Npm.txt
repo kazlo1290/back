@@ -1,0 +1,9 @@
+npm i express dotenv mongoose colors
+npm i -D nodemon
+npm run server
+npm i express-async-handler
+npm i jsonwebtoken
+npx create-react-app@latest frontend --template redux
+npm i react-toastify
+npm i react-router-dom@latest
+npm i react-icons --save
