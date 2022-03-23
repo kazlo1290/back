@@ -4,6 +4,25 @@ npm run server
 npm i express-async-handler
 npm i jsonwebtoken
 npx create-react-app@latest frontend --template redux
+npm i @mui/material
+npm i @reduxjs/toolkit
+npm i @testing-library/jest-dom
+npm i @testing-library/react
+npm i @testing-library/user-event
+npm i axios
+npm i file-uri-to-path
+npm i framer-motion
+npm i react
+npm i react-dom
+npm i react-icons
+npm i react-redux
 npm i react-toastify
 npm i react-router-dom@latest
-npm i react-icons --save
+npm i react-scripts
+npm i react-search-box
+npm i react-tooltip
+npm i styled-components
+npm i styled-normalize
+npm i typescript
+npm i web-vita
+npm i -f

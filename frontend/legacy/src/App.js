@@ -1,15 +1,11 @@
 import React from 'react';
 import { Route, Routes, useLocation } from "react-router";
-import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Header from './Components/header';
 import Home from "./Pages/Home";
 import Blog from "./Pages/Blog";
 import Changelog from "./Pages/Changelog";
 import Project from "./Pages/Project";
-import Dashboard from './Pages/Dashboard'
-import Login from './Pages/Login.jsx';
-import Register from './Pages/Register.jsx';
 import styled from "styled-components";
 
 const Pages = styled.main`
@@ -38,14 +34,10 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/changelog" element={<Changelog />} />
             <Route path="/project" element={<Project />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
           </Routes>
       </Pages>
-      <ToastContainer />
     </>
   );
-}
+};
 
-export default App;
+export default App
