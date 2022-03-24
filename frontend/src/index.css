@@ -88,11 +88,24 @@ h3 {
 
 .goals {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
 .goal {
+  background-color: #f4f4f4;
+  margin: 10px 0;
+  padding: 20px 0 10px;
+  position: relative;
+}
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.user {
   background-color: #f4f4f4;
   margin: 10px 0;
   padding: 20px 0 10px;
@@ -110,7 +123,7 @@ h3 {
 
 .form,
 .content {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 

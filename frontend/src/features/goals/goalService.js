@@ -28,6 +28,14 @@ const getGoals = async (token) => {
   return response.data
 }
 
+// Get All goals
+const getAllGoals = async () => {
+
+  const response = await axios.get(API_URL + "all")
+
+  return response.data
+}
+
 // Delete user goal
 const deleteGoal = async (goalId, token) => {
   const config = {
@@ -44,6 +52,7 @@ const deleteGoal = async (goalId, token) => {
 const goalService = {
   createGoal,
   getGoals,
+  getAllGoals,
   deleteGoal,
 }
 

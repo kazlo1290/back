@@ -1,4 +1,5 @@
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
+import { MdAccountBox } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
@@ -20,6 +21,11 @@ function Header() {
         <Link to='/'>HI</Link>
       </div>
       <ul>
+        <li>
+          <Link to='/dashboard'>
+            <MdAccountBox /> Dashboard
+          </Link>
+        </li>
         {user ? (
           <li>
             <button className='btn' onClick={onLogout}>
