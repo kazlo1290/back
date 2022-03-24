@@ -59,9 +59,9 @@ function Login() {
     <>
       <section className='heading'>
         <h1>
-          <FaSignInAlt /> Login
+          <FaSignInAlt /> Нэвтрэх
         </h1>
-        <p>Login and start setting goals</p>
+        <p>Нэвтрээд шинэ зүйлс нэмээрэй.</p>
       </section>
 
       <section className='form'>
@@ -73,7 +73,7 @@ function Login() {
               id='email'
               name='email'
               value={email}
-              placeholder='Enter your email'
+              placeholder='Таны и-мэйл хаяг'
               onChange={onChange}
             />
           </div>
@@ -84,14 +84,14 @@ function Login() {
               id='password'
               name='password'
               value={password}
-              placeholder='Enter password'
+              placeholder='Нууц үг'
               onChange={onChange}
             />
           </div>
 
           <div className='form-group'>
             <button type='submit' className='btn btn-block'>
-              Submit
+              Нэвтрэх
             </button>
           </div>
         </form>

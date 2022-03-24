@@ -66,9 +66,9 @@ function Register() {
     <>
       <section className='heading'>
         <h1>
-          <FaUser /> Register
+          <FaUser /> Бүртгүүлэх
         </h1>
-        <p>Please create an account</p>
+        <p>Шинэ хаяг нээцгээе</p>
       </section>
 
       <section className='form'>
@@ -80,7 +80,7 @@ function Register() {
               id='name'
               name='name'
               value={name}
-              placeholder='Enter your name'
+              placeholder='Таны нэр'
               onChange={onChange}
             />
           </div>
@@ -91,7 +91,7 @@ function Register() {
               id='email'
               name='email'
               value={email}
-              placeholder='Enter your email'
+              placeholder='Таны и-мэйл хаяг'
               onChange={onChange}
             />
           </div>
@@ -102,7 +102,7 @@ function Register() {
               id='password'
               name='password'
               value={password}
-              placeholder='Enter password'
+              placeholder='Нууц үг'
               onChange={onChange}
             />
           </div>
@@ -113,13 +113,13 @@ function Register() {
               id='password2'
               name='password2'
               value={password2}
-              placeholder='Confirm password'
+              placeholder='Нууц үг батлах'
               onChange={onChange}
             />
           </div>
           <div className='form-group'>
             <button type='submit' className='btn btn-block'>
-              Submit
+              Бүртгүүлэх
             </button>
           </div>
         </form>

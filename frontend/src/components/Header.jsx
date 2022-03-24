@@ -17,25 +17,25 @@ function Header() {
   return (
     <header className='header'>
       <div className='logo'>
-        <Link to='/'>GoalSetter</Link>
+        <Link to='/'>HI</Link>
       </div>
       <ul>
         {user ? (
           <li>
             <button className='btn' onClick={onLogout}>
-              <FaSignOutAlt /> Logout
+              <FaSignOutAlt /> Гарах
             </button>
           </li>
         ) : (
           <>
             <li>
               <Link to='/login'>
-                <FaSignInAlt /> Login
+                <FaSignInAlt /> Нэвтрэх
               </Link>
             </li>
             <li>
               <Link to='/register'>
-                <FaUser /> Register
+                <FaUser /> Бүртгүүлэх
               </Link>
             </li>
           </>
