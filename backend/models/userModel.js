@@ -15,6 +15,10 @@ const userSchema = mongoose.Schema(
         type: String,
         required: [true, 'Нууц үгээ оруулна уу']
     },
+    role: {
+        type: String,
+        required: [true, 'Role']
+    },
 },
 {
     timestamps: true,
