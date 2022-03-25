@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended: false}))
 
 app.use('/api/goals', require('./routes/goalRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
+app.use('/api/posts', require('./routes/postRoutes'))
 
 // Serve frontend
 if (process.env.NODE_ENV === 'production') {
@@ -26,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
       )
     )
   } else {
-    app.get('/', (req, res) => res.send('Please set to production'))
+    app.get('/', (req, res) => res.send('production дээр тохируулна уу'))
   }
   
 app.use(errorHandler)

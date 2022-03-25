@@ -27,7 +27,7 @@ const getPublicGoals = asyncHandler(async (req, res) => {
 const setGoals = asyncHandler(async (req, res) => {
     if (!req.body.text) {
         res.status(400)
-        throw new Error('Text nem')
+        throw new Error('Text нэмнэ үү')
     }
 
     const goal = await Goal.create({
@@ -46,7 +46,7 @@ const updateGoals = asyncHandler(async (req, res) => {
 
     if(!goal) {
         res.status(400)
-        throw new Error('Goal oldsongvi')
+        throw new Error('Олдсонгүй')
     }
 
     const user = await User.findById(req.user.id)
@@ -78,7 +78,7 @@ const deleteGoals = asyncHandler(async (req, res) => {
 
     if(!goal) {
         res.status(400)
-        throw new Error('Oldsngvo')
+        throw new Error('Олдсонгүй')
     }
 
     const user = await User.findById(req.user.id)

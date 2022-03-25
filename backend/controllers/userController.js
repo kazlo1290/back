@@ -42,7 +42,7 @@ const registerUser = asyncHandler(async (req, res) => {
         })
     } else {
         res.status(400)
-        throw new Error('Буруу хэрэглэгчийн өгөгдөл')
+        throw new Error('Зөв оруулна уу')
     }
 })
 
@@ -64,7 +64,7 @@ const loginUser = asyncHandler(async (req, res) => {
         })
     } else {
         res.status(400)
-        throw new Error('Буруу итгэмжлэл')
+        throw new Error('Аль нэг буруу')
     }
 })
 
