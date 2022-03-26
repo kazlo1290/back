@@ -26,3 +26,4 @@ npm i styled-normalize
 npm i typescript
 npm i web-vita
 npm i -f
+npm update -g
