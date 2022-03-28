@@ -8,13 +8,24 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import GoalsPage from './pages/GoalsPage'
 import PostsPage from './pages/PostsPage'
+import styled from 'styled-components'
+  
 
+const SEC = styled.main`
+  width: calc(100% - 80px);
+  margin: 0;
+  padding: 20px 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+`
 function App() {
   return (
     <>
       <Router>
         <div className='container'>
           <Header />
+          <SEC>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/dashboard' element={<Dashboard />} />
@@ -23,6 +34,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
           </Routes>
+          </SEC>
         </div>
       </Router>
       <ToastContainer />
