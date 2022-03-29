@@ -1,0 +1,33 @@
+
+.logo, .logoimg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-top: 1px solid rgba(4, 4, 24, 0.1);
+}
+.navbar.space{
+    margin-top: auto;
+}
+span.none {
+    display: none;
+}
+svg{
+    width: 24px;
+    height: 24px;
+}
+.primary_btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    appearance: button;
+    padding: 13px 28px;
+}

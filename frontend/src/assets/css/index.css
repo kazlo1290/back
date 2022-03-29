@@ -40,45 +40,6 @@ h3 {
   text-align: center;
 }
 
-.header {
-  position: fixed;
-  display: flex;
-  height: 100vh;
-  width: 80px;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
-}
-.logoimg{
-  width: 4rem;
-  height: 4rem;
-}
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.header ul li {
-  margin-left: 20px;
-}
-
-.header ul li a {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-span.none {
-  display: none;
-}
-
-.header ul li a:hover {
-  color: #777;
-}
-
 .heading {
   font-size: 2rem;
   font-weight: 700;
@@ -156,6 +117,7 @@ span.none {
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 5px;
+  background: #000;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
