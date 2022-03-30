@@ -20,6 +20,7 @@ header{
 svg{
     width: 24px;
     height: 24px;
+    fill: #ddd;
 }
 .primary_btn{
     border: none;
@@ -42,6 +43,8 @@ svg{
     .navbar.space{
         margin: 0;
         justify-content: flex-start;
-        
+    }
+    .primary_btn {
+        padding: 20px 17px;
     }
   }

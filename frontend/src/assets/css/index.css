@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
+:root {
+  color-1: #040418;
+  color-2: #ff6279;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,11 +12,13 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  background: #040418;
+  color: #ddd;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #ddd;
 }
 
 p {
@@ -115,6 +120,8 @@ h1, h3 {
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
+  background: #040418;
+  color: #ddd
 }
 
 .form-group label {
@@ -127,7 +134,7 @@ h1, h3 {
   padding: 10px 20px;
   border: 1px solid #000;
   border-radius: 5px;
-  background: #000;
+  background: #ff6279;
   color: #fff;
   font-size: 16px;
   font-weight: 700;

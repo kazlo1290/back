@@ -15,9 +15,9 @@ const Container = styled.header`
   flex-direction: column;
   padding: 20px 0;
   /* box-shadow: 1px 0px 20px rgba(255, 98, 121, 0.3); */
-  box-shadow: 1px 0px 20px rgba(4, 4, 24, 0.3);
+  box-shadow: 1px 0px 20px rgba(255, 255, 255, 0.3);
   transition: width 0.5s ease;
-  background: #fff;
+  background: rgba(4, 4, 24, 1);
   .active {
     color: rgba(255, 98, 121, 0.8);
   background: rgba(4, 4, 24, 1);
@@ -43,11 +43,11 @@ const Item = styled(NavLink)`
 display: flex;
   height: 50px;
   padding: 13px 24px 13px 28px;
-  border-right: 4px solid #fff;
+  border-right: 4px solid transparent;
   @media screen and (max-width: 767px) {
     height: 4rem;
     border-right: none;
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid transparent;
     padding: 20px 17px 16px;
   }
 `
@@ -60,9 +60,10 @@ const Button = styled.button`
     right: -12px;
     top: 100px;
     width: 24px;
+    background: #040418;
     height: 24px;
     border-radius: 30px;
-    border: 1px solid rgba(4, 4, 24, 0.3);
+    border: 1px solid rgba(255, 255, 255, 1);
     @media screen and (max-width: 767px) {
       display: none;
     }
@@ -70,6 +71,7 @@ const Button = styled.button`
 const Text = styled.span`
 display: ${(props) => (props.clicked ? "block" : "none")};
 margin-left: 10px;
+color: #ddd;
 `
 function Header() {
   const navigate = useNavigate()
