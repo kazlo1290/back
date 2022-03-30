@@ -1,5 +1,8 @@
-
+header{
+    z-index: 90;
+}
 .logo, .logoimg {
+    margin: 0 auto;
     width: 4rem;
     height: 4rem;
 }
@@ -9,12 +12,10 @@
     flex-direction: column;
     margin-top: 50px;
     border-top: 1px solid rgba(4, 4, 24, 0.1);
+    width: 100%;
 }
 .navbar.space{
     margin-top: auto;
-}
-span.none {
-    display: none;
 }
 svg{
     width: 24px;
@@ -26,8 +27,21 @@ svg{
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     appearance: button;
     padding: 13px 28px;
 }
+@media screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: row;
+        margin: 0;
+        justify-content: flex-end;
+        border-top: none;
+    }
+    .navbar.space{
+        margin: 0;
+        justify-content: flex-start;
+        
+    }
+  }

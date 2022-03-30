@@ -13,11 +13,17 @@ import styled from 'styled-components'
 
 const SEC = styled.main`
   width: calc(100% - 80px);
+  height: 100vh;
   margin: 0;
   padding: 20px 0;
   top: 0;
   right: 0;
   position: absolute;
+  z-index: 1;
+  @media screen and (max-width: 767px) {
+    margin-top: 100px;
+    width: 100%;
+  }
 `
 function App() {
   return (

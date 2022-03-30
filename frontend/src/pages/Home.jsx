@@ -10,7 +10,7 @@ function Home() {
         <p>Мэдээний самбар</p>
       </section>
 
-      <section className='content'>
+      <section className='container'>
         <br />
         <h3>Нийт мэдээ</h3>
         <br />
