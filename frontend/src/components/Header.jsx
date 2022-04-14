@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from '../assets/img/png/logopng64.png'
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { logout, reset } from '../features/auth/authSlice'
+import { logout, reset } from '../api/auth/authSlice'
 import styled from 'styled-components'
 
 const Container = styled.header`

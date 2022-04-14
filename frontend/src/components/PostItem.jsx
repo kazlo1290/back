@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { deletePost } from '../features/posts/postSlice'
+import { deletePost } from '../api/posts/postSlice'
 
 function PostItem({ post }) {
     const dispatch = useDispatch()

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import PostItemPublic from './PostItemPublic'
 import Spinner from './Spinner'
-import { getAllPosts, reset } from '../features/posts/postSlice'
+import { getAllPosts, reset } from '../api/posts/postSlice'
 
 function PostsJSX() {
   const navigate = useNavigate()
