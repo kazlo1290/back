@@ -20,11 +20,6 @@ function Dashboard() {
       <section className='content'>
         <ul>
           <li>
-            <Link to='/goals'>
-              Goal нэмэх
-            </Link>
-          </li>
-          <li>
             <Link to='/posts'>
               Post нэмэх
             </Link>

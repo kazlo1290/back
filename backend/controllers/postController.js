@@ -21,9 +21,9 @@ const getAllPosts = asyncHandler(async (req, res) => {
     res.status(200).json(posts)
 })
 
-// @desc Get Posts
-// @route GET /api/posts
-// @access Public
+// @desc Set Posts
+// @route POST /api/posts
+// @access Private
 const setPosts = asyncHandler(async (req, res) => {
     if (!req.body.title) {
         res.status(400)
@@ -41,8 +41,8 @@ const setPosts = asyncHandler(async (req, res) => {
     res.status(200).json(post)
 })
 
-// @desc Update Goals
-// @route PUT /api/goals/:id
+// @desc Update Posts
+// @route PUT /api/posts/:id
 // @access Private
 const updatePosts = asyncHandler(async (req, res) => {
     const post = await Post.findById(req.params.id)
@@ -61,12 +61,12 @@ const updatePosts = asyncHandler(async (req, res) => {
     }
 
     // Make sure the logged in user matches tl
-    if(goal.user.toString() !== user.id) {
+    if(post.user.toString() !== user.id) {
         res.status (401)
         throw new Error('Хэрэглэгч зөвшөөрөлгүй')
     }
 
-    const updatedPosts = await Goal.findByIdAndUpdate(req.params.id, req.body, {
+    const updatedPosts = await Post.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
     })
 

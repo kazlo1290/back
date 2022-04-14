@@ -1,6 +1,5 @@
 import React from 'react'
 import PostsJSX from '../components/Posts'
-import GoalsJSX from '../components/Goals'
 
 function Home() {
 
@@ -11,10 +10,6 @@ function Home() {
       </section>
 
       <section className='container'>
-        <br />
-        <h3>Нийт мэдээ</h3>
-        <br />
-        <GoalsJSX />
         <br />
         <h3>Нийт Нийтлэл</h3>
         <br/>
