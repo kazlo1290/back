@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 :root {
-  color-1: #040418;
-  color-2: #ff6279;
+  --p-white: #fff;
+  --p-dark: #040418;
+  --p-pink: #ff6279;
+  --p-input-text: #ecebeb;
+  --p-gray: #999;
 }
 * {
   margin: 0;
@@ -12,13 +15,13 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
-  background: #040418;
-  color: #ddd;
+  background: var(--p-white);
+  color: var(--p-dark);
 }
 
 a {
   text-decoration: none;
-  color: #ddd;
+  color: var(--p-gray);
 }
 
 p {
@@ -59,7 +62,7 @@ h1, h3 {
 }
 
 .heading p {
-  color: #828282;
+  color: var(p-dark);
 }
 
 .goals {
@@ -70,8 +73,8 @@ h1, h3 {
 }
 
 .goal {
-  color: #999;
-  background-color: #040418;
+  color: var(--p-gray);
+  background-color: var(--p-dark);
   margin: 10px auto;
   padding: 20px 10px 10px;
   position: relative;
@@ -85,7 +88,7 @@ h1, h3 {
 }
 
 .user {
-  background-color: #f4f4f4;
+  background-color: var(--p-white);
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;
@@ -98,7 +101,7 @@ h1, h3 {
   cursor: pointer;
   border: none;
   background: none;
-  color: #ff6279;
+  color: var(--p-pink);
 }
 
 .form,
@@ -116,12 +119,12 @@ h1, h3 {
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--p-dark);
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
-  background: #040418;
-  color: #ddd
+  background: var(--p-input-text);
+  color: var(--p-dark);
 }
 
 .form-group label {
@@ -132,10 +135,10 @@ h1, h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid var(--p-dark);
   border-radius: 5px;
-  background: #ff6279;
-  color: #fff;
+  background: var(--p-dark);
+  color: var(--p-white);
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -148,8 +151,8 @@ h1, h3 {
 
 
 .btn-reverse {
-  background: #fff;
-  color: #000;
+  background: var(--p-white);
+  color: var(--p-dark);
 }
 
 .btn-block {
@@ -178,7 +181,7 @@ h1, h3 {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: #000 transparent #555 transparent;
+  border-color: var(--p-dark) transparent var(--p-gray) transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }
@@ -212,11 +215,11 @@ h1, h3 {
 	width: 16px;
 }
 ::-webkit-scrollbar-track{
-	background: #eee;
+	background: var(--p-input-text);
 	/* border-radius: 8px; */
 }
 ::-webkit-scrollbar-thumb{
-	background: #ff6279;
+	background: var(--p-dark);
 	height: 56px;
   border-radius: 8px;
   border: 4px solid transparent;

@@ -11,7 +11,7 @@ header{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    border-top: 1px solid rgba(4, 4, 24, 0.1);
+    border-top: 1px solid var(--p-dark);
     width: 100%;
 }
 .navbar.space{
@@ -20,7 +20,7 @@ header{
 svg{
     width: 24px;
     height: 24px;
-    fill: #ddd;
+    fill: var(--p-white);
 }
 .primary_btn{
     border: none;

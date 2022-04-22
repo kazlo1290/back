@@ -15,9 +15,9 @@ const Container = styled.header`
   flex-direction: column;
   padding: 20px 0;
   /* box-shadow: 1px 0px 20px rgba(255, 98, 121, 0.3); */
-  box-shadow: 1px 0px 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 0px 20px var(--p-white);
   transition: width 0.5s ease;
-  background: rgba(4, 4, 24, 1);
+  background: var(--p-dark);
   .active {
     color: rgba(255, 98, 121, 0.8);
   background: rgba(4, 4, 24, 1);
