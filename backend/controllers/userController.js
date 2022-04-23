@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
+const Role = require('../models/roleModel')
 
 // @desc Register New User
 // @route POST /api/users
@@ -25,12 +26,13 @@ const registerUser = asyncHandler(async (req, res) => {
     // Нууц үг Hash
     const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(password, salt)
-
+    const role = '3'
     // Шинэ хэрэглэгч
     const user = await User.create({
         name,
         email,
         password: hashedPassword,
+        role,
     })
 
     if(user) {
@@ -38,6 +40,7 @@ const registerUser = asyncHandler(async (req, res) => {
             id: user.id,
             name: user.name,
             email: user.email,
+            role: user.role,
             token: generateToken(user._id),
         })
     } else {
@@ -60,6 +63,7 @@ const loginUser = asyncHandler(async (req, res) => {
             _id: user.id,
             name: user.name,
             email: user.email,
+            role: user.role,
             token: generateToken(user._id),
         })
     } else {
@@ -72,12 +76,13 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route GET /api/users/me
 // @access Private
 const getMe = asyncHandler(async (req, res) => {
-    const { _id, name, email } = await User.findById(req.user.id) 
+    const { _id, name, email, role } = await User.findById(req.user.id) 
 
     res.status (200).json({
         id: _id,
         name,
         email,
+        role,
     })
 })
 
@@ -85,14 +90,58 @@ const getMe = asyncHandler(async (req, res) => {
 // @route GET /api/users/all
 // @access Public
 const getAllUser = asyncHandler(async (req, res) => {
-    const { name, email} = await User.find() 
+    const user = await User.find() 
 
-    res.status(200).json({
-        name, 
-        email,
-    })
+    res.status(200).json(user)
 })
 
+
+// @desc Update User Data
+// @route PUT /api/users/:id
+// @access Private
+const updateUser = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.user.id) 
+
+    // Хэрэглэгч шалгах
+    if(!user) {
+        res.status(401)
+        throw new Error('Хэрэглэгч олдсонгүй')
+    }
+
+    if(user.id !== user.id) {
+        res.status (401)
+        throw new Error('Хэрэглэгч зөвшөөрөлгүй')
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, {
+        new: true,
+    })
+
+    res.status(200).json(updatedUser)
+
+})
+
+// @desc Delete User Data
+// @route DELETE /api/users/:id
+// @access Private
+const deleteUser = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.user.id) 
+
+    // Хэрэглэгч шалгах
+    if(!user) {
+        res.status(401)
+        throw new Error('Хэрэглэгч олдсонгүй')
+    }
+
+    if(user.id !== user.id) {
+        res.status (401)
+        throw new Error('Хэрэглэгч зөвшөөрөлгүй')
+    }
+
+    await user.remove()
+
+    res.status(200).json({ id: req.user.id })
+})
 // Generate JWT
 const generateToken = (id) => {
     return jwt.sign({ id}, process.env.JWT_SECRET, {
@@ -105,4 +154,6 @@ module.exports = {
     loginUser,
     getMe,
     getAllUser,
+    updateUser,
+    deleteUser,
 }

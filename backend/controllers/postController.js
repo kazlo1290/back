@@ -25,9 +25,9 @@ const getAllPosts = asyncHandler(async (req, res) => {
 // @route POST /api/posts
 // @access Private
 const setPosts = asyncHandler(async (req, res) => {
-    if (!req.body.title) {
+    if (!req.body.title ||!req.body.content) {
         res.status(400)
-        throw new Error('Title нэмнэ үү')
+        throw new Error('Утга нэмнэ үү')
     }
 
     const post = await Post.create({
@@ -54,7 +54,7 @@ const updatePosts = asyncHandler(async (req, res) => {
 
     const user = await User.findById(req.user.id)
 
-    // Check For User
+    // Хэрэглэгч шалгах
     if(!user) {
         res.status(401)
         throw new Error('Хэрэглэгч олдсонгүй')
