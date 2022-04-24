@@ -5,8 +5,10 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../api/auth/authSlice'
 import Spinner from '../components/Spinner'
+import { Helmet } from 'react-helmet'
 
 function Login() {
+  const TITLE = 'Нэвтрэх'
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -57,6 +59,9 @@ function Login() {
 
   return (
     <>
+    <Helmet>
+          <title>{ TITLE }</title>
+    </Helmet>
       <section className='heading'>
         <h1>
           <FaSignInAlt /> Нэвтрэх

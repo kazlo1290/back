@@ -1,0 +1,58 @@
+.logo, .logoimg {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    border-top: 1px solid var(--p-dark);
+    width: 100%;
+}
+.navbar.space{
+    margin-top: auto;
+}
+svg{
+    width: 20px;
+    height: 20px;
+    fill: var(--p-white);
+}
+.ContainerOpen{
+    width: 15rem;
+}
+.ContainerClose{
+    width: 5rem;
+}
+.TextOpen{
+    display: block;
+}
+.TextClose{
+    display: none;
+}
+.primary_btn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    appearance: button;
+    padding: 13px 28px;
+}
+@media screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: row;
+        margin: 0;
+        justify-content: flex-end;
+        border-top: none;
+    }
+    .navbar.space{
+        margin: 0;
+        justify-content: flex-start;
+    }
+    .primary_btn {
+        padding: 20px 17px;
+    }
+}

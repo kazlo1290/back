@@ -5,8 +5,10 @@ import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../api/auth/authSlice'
 import Spinner from '../components/Spinner'
+import { Helmet } from 'react-helmet'
 
 function Register() {
+  const TITLE = 'Бүртгүүлэх'
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -64,6 +66,9 @@ function Register() {
 
   return (
     <>
+      <Helmet>
+        <title>{ TITLE }</title>
+      </Helmet>
       <section className='heading'>
         <h1>
           <FaUser /> Бүртгүүлэх
