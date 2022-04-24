@@ -5,7 +5,8 @@ import PostForm from '../components/PostForm'
 import PostItem from '../components/PostItem'
 import Spinner from '../components/Spinner'
 import { getPosts, reset } from '../api/posts/postSlice'
-
+import Aside from '../components/Aside';
+import Header from '../components/Header'
 function PostsPage() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -38,6 +39,9 @@ function PostsPage() {
 
   return (
     <>
+    <Aside />
+    <main>
+      <Header />
       <section className='heading'>
         <h1>Тавтай Морилно уу {user && user.name}</h1>
         <p>Шинэ Нийтлэл нэмэх үү дээ</p>
@@ -57,6 +61,7 @@ function PostsPage() {
           <h3>Нийтлэл алга</h3>
         )}
       </section>
+      </main>
     </>
   )
 }

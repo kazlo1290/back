@@ -59,7 +59,7 @@ function Register() {
     e.preventDefault()
 
     if (password !== password2) {
-      toast.error('Passwords do not match')
+      toast.error('Нууц үг ижил байх ёстой')
     } else {
       const userData = {
         name,

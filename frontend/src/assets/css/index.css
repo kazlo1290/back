@@ -152,3 +152,9 @@ svg#svg {
   border: 4px solid transparent;
   background-clip: content-box;
 }
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+    top: 70px;
+  }
+}

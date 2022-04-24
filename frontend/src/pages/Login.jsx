@@ -40,6 +40,7 @@ function Login() {
 
     if (isSuccess || user) {
       navigate('/dashboard')
+      toast.success('Амжилттай нэвтэрлээ')
     }
 
     dispatch(reset())
