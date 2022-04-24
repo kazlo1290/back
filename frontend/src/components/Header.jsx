@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../api/auth/authSlice'
 import { FaBeer } from 'react-icons/fa';
-import { VscAccount, VscSignIn } from "react-icons/vsc";
+import { VscSignIn } from "react-icons/vsc";
 const Container = styled.header`
     display: flex;
     width: 100%;
@@ -70,10 +70,6 @@ function Header(props) {
               <Item to='/login' activeclassname="active">
               <Text><VscSignIn/></Text>
               <Text className={TextClass}>Нэвтрэх</Text>
-              </Item>
-              <Item to='/register' activeclassname="active">
-              <Text><VscAccount/></Text>
-              <Text className={TextClass}>Бүртгүүлэх</Text>
               </Item>
           </div>
         )} 

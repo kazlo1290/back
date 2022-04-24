@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import PostsPage from './pages/PostsPage'
+import Changelog from './pages/Changelog'
 // import Aside from './components/Aside'
 // import Main from './components/Main'
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path='/posts' element={<PostsPage />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/changelog' element={<Changelog />} />
         </Routes>
       </Router>
       <ToastContainer />

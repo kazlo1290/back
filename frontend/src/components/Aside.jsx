@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/img/jpg/logoimg64.jpg'
+import Logo from '../assets/img/logoimg.jpg'
 import { NavLink, Link} from 'react-router-dom'
 import { BiAdjust, BiCategory, BiCollection } from "react-icons/bi";
 import styled from 'styled-components'
@@ -8,6 +8,7 @@ const Container = styled.aside`
   position: fixed;
   display: flex;
   height: 100vh;
+  top: 0;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
@@ -54,6 +55,8 @@ display: flex;
 `
 const ItemLogo = styled(Link)`
   padding: 0;
+  display: flex;
+  align-items: center;
 `
 const Button = styled.button`
     cursor: pointer;
@@ -89,6 +92,7 @@ function Aside(props){
       <div className='logo'>
         <ItemLogo to='/'>
           <img className='logoimg' src={Logo} alt='logo' />
+          <Text className={TextClass}>Colorfully.mn</Text>
         </ItemLogo>
       </div>
       <div className='navbar'>
