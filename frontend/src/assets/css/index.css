@@ -1,7 +1,11 @@
 
 :root {
   --p-white: #fff;
+  --p-bg: #f0f2f5;
   --p-dark: #040418;
+  --p-dark-6: rgb(4, 4, 24, .6);
+  --p-dark-4: rgb(4, 4, 24, .4);
+  --p-dark-1: rgb(4, 4, 24, .1);
   --p-pink: #ff6279;
   --p-input-text: #ecebeb;
   --p-gray: #999;
@@ -15,21 +19,125 @@
 body {
   font-family: 'Inter', sans-serif;
   height: 100vh;
-  background: var(--p-white);
+  background: var(--p-bg);
   color: var(--p-dark);
 }
-
 a {
   text-decoration: none;
   color: var(--p-white);
 }
+svg#svg {
+  fill: var(--p-dark);
+}
+.heading {
+  font-size: 2rem;
+  width: 80%;
+  margin: 10px auto 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--p-dark);
+}
+.heading p {
+  font-size: 28px;
+  color: var(--p-dark-4);
+}
+.form,
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 10px;
+}
 
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--p-dark-4);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  background: var(--p-white);
+  color: var(--p-dark-4);
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid var(--p-dark);
+  border-radius: 5px;
+  background: var(--p-dark);
+  color: var(--p-white);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn-reverse {
+  background: var(--p-white);
+  color: var(--p-dark);
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: var(--p-dark) transparent var(--p-gray) transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Scroll */
 ::-webkit-scrollbar{
 	width: 16px;
 }
 ::-webkit-scrollbar-track{
-	background: var(--p-input-text);
+	background: var(--p-white);
 	/* border-radius: 8px; */
 }
 ::-webkit-scrollbar-thumb{

@@ -1,14 +1,25 @@
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../api/auth/authSlice'
 import Spinner from '../components/Spinner'
 import { Helmet } from 'react-helmet'
-
+import styled from 'styled-components'
+import '../assets/css/log_reg.css'
+import Logo from '../assets/img/logopng.png'
+import Avatar from '../assets/img/avatar.png'
 function Register() {
+
+  // Title
   const TITLE = 'Бүртгүүлэх'
+
+  // Style
+  const Item = styled(NavLink)`
+  color: var(--p-dark-6);
+  `
+
+  // User Auth
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -69,14 +80,19 @@ function Register() {
       <Helmet>
         <title>{ TITLE }</title>
       </Helmet>
-      <section className='heading'>
-        <h1>
-          <FaUser /> Бүртгүүлэх
-        </h1>
-        <p>Шинэ хаяг нээцгээе</p>
+      <div className='container'>
+      <section className='log heading'>
+      <Item to='/'>
+        <img src={Logo} alt="Logo" />
+        </Item>
       </section>
 
-      <section className='form'>
+      <section className='log_form'>
+      <div className='defualt_avatar' 
+        style={{ 
+        backgroundImage: `url(${Avatar})`,}}>
+        </div>
+        <h1>{ TITLE }</h1>
         <form onSubmit={onSubmit}>
           <div className='form-group'>
             <input
@@ -124,11 +140,20 @@ function Register() {
           </div>
           <div className='form-group'>
             <button type='submit' className='btn btn-block'>
-              Бүртгүүлэх
+              {TITLE}
             </button>
           </div>
         </form>
+        <div className='log_use'>
+        <Item to='/login'>Нэвтрэх</Item>
+        <Item to='lostpassword'>Нууц үг сэргээх</Item>
+        </div>
       </section>
+
+      <section className='to_home'>
+      <Item to='/'>Нүүр хуудас руу буцах</Item>
+      </section>
+      </div>
     </>
   )
 }

@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react'
-import { FaSignInAlt } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../api/auth/authSlice'
 import Spinner from '../components/Spinner'
 import { Helmet } from 'react-helmet'
-
+import styled from 'styled-components'
+import '../assets/css/log_reg.css'
+import Logo from '../assets/img/logopng.png'
+import Avatar from '../assets/img/avatar.png'
 function Login() {
+
+  // Title
   const TITLE = 'Нэвтрэх'
+
+  // Style
+  const Item = styled(NavLink)`
+  color: var(--p-dark-6);
+  `
+  // User Auth
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -62,14 +72,19 @@ function Login() {
     <Helmet>
           <title>{ TITLE }</title>
     </Helmet>
-      <section className='heading'>
-        <h1>
-          <FaSignInAlt /> Нэвтрэх
-        </h1>
-        <p>Нэвтрээд шинэ зүйлс нэмээрэй.</p>
+    <div className='container'>
+      <section className='log heading'>
+        <Item to='/'>
+        <img src={Logo} alt="Logo" />
+        </Item>
       </section>
 
-      <section className='form'>
+      <section className='log_form'>
+        <div className='defualt_avatar' 
+        style={{ 
+        backgroundImage: `url(${Avatar})`,}}>
+        </div>
+        <h1>{ TITLE }</h1>
         <form onSubmit={onSubmit}>
           <div className='form-group'>
             <input
@@ -96,11 +111,20 @@ function Login() {
 
           <div className='form-group'>
             <button type='submit' className='btn btn-block'>
-              Нэвтрэх
+              {TITLE}
             </button>
           </div>
         </form>
+        <div className='log_use'>
+        <Item to='/register'>Бүртгүүлэх</Item>
+        <Item to='lostpassword'>Нууц үг сэргээх</Item>
+        </div>
       </section>
+
+      <section className='to_home'>
+      <Item to='/'>Нүүр хуудас руу буцах</Item>
+      </section>
+      </div>
     </>
   )
 }

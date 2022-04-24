@@ -11,8 +11,6 @@ const Container = styled.header`
     padding: 0 20px;
     justify-content: flex-end;
     background: var(--p-dark);
-    position: fixed;
-    width: calc(100% - 15rem);
     right: 0;
     .active {
         color: rgba(255, 98, 121, 0.8);
