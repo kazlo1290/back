@@ -17,6 +17,7 @@ main{
 }
 main.main {
   width: 100%;
+  top: 80px;
 }
 .maxw {
   max-width: 1040px;
@@ -128,7 +129,7 @@ button {
   width: 64px;
   height: 64px;
   border: 8px solid;
-  border-color: var(--p-dark) transparent var(--p-gray) transparent;
+  border-color: var(--p-dark) transparent var(--p-pink) transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
 }

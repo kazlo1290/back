@@ -4,6 +4,7 @@ import PostOff from '../components/PostOff';
 import Header from '../components/Header'
 import { Helmet } from 'react-helmet'
 import '../assets/css/home.css'
+import '../assets/css/posts.css'
 import Tabs from '../components/Tabs'
 function Home() {
   // Title

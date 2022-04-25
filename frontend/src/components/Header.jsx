@@ -8,6 +8,10 @@ import '../assets/css/header.css'
   const Container = styled.header`
     background: var(--p-white);
     box-shadow: var(--p-bs-header);
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
   `
   const SubContainer = styled.div`
     display: flex;
