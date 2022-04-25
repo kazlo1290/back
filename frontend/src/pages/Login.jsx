@@ -36,6 +36,7 @@ function Login() {
   useEffect(() => {
     if (isError) {
       toast.error(message)
+      toast.error('Алдаа')
     }
 
     if (isSuccess || user) {
@@ -73,14 +74,14 @@ function Login() {
     <Helmet>
           <title>{ TITLE }</title>
     </Helmet>
-    <div className='container'>
-      <section className='log heading'>
+    <div className='logres_container'>
+      <section className='logres_heading'>
         <Item to='/'>
         <img src={Logo} alt="Logo" />
         </Item>
       </section>
 
-      <section className='log_form'>
+      <section className='logres_form'>
         <div className='defualt_avatar' 
         style={{ 
         backgroundImage: `url(${Avatar})`,}}>
@@ -116,13 +117,13 @@ function Login() {
             </button>
           </div>
         </form>
-        <div className='log_use'>
+        <div className='logres_use'>
         <Item to='/register'>Бүртгүүлэх</Item>
-        <Item to='lostpassword'>Нууц үг сэргээх</Item>
+        <Item to='/user/lostpassword'>Нууц үг сэргээх</Item>
         </div>
       </section>
 
-      <section className='to_home'>
+      <section className='logres_to_home'>
       <Item to='/'>Нүүр хуудас руу буцах</Item>
       </section>
       </div>

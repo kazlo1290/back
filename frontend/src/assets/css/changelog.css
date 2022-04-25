@@ -1,3 +1,3 @@
-.container_changelog {
-    display: flex;
+aside.changelog {
+    top: 60px;
 }

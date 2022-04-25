@@ -34,7 +34,7 @@ if (isLoading) {
 
       <section className='content'>
         {posts.length > 0 ? (
-          <div className='goals'>
+          <div className='post-items'>
             {posts.map((post) => (
               <PostItemPublic key={post._id} post={post} />
             ))}

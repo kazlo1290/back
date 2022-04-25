@@ -1,14 +1,14 @@
 import React from 'react';
-import Logo from '../assets/img/logoimg.jpg'
-import { NavLink, Link} from 'react-router-dom'
-import { BiAdjust, BiCategory, BiCollection } from "react-icons/bi";
+// import Logo from '../assets/img/logoimg.jpg'
+import { NavLink} from 'react-router-dom'
+import { BiCategory, BiCollection } from "react-icons/bi";
 import styled from 'styled-components'
 import '../assets/css/aside.css'
 const Container = styled.aside`
   position: fixed;
   display: flex;
   height: 100vh;
-  top: 0;
+  top: 60px;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
@@ -53,25 +53,25 @@ display: flex;
     padding: 20px 17px 16px;
   }
 `
-const ItemLogo = styled(Link)`
-  padding: 0;
-  display: flex;
-  align-items: center;
-`
-const Button = styled.button`
-    cursor: pointer;
-    position: absolute;
-    right: -12px;
-    top: 18px;
-    width: 24px;
-    background: #040418;
-    height: 24px;
-    border-radius: 30px;
-    border: 2px solid var(--p-dark);
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
-`
+// const ItemLogo = styled(Link)`
+//   padding: 0;
+//   display: flex;
+//   align-items: center;
+// `
+// const Button = styled.button`
+//     cursor: pointer;
+//     position: absolute;
+//     right: -12px;
+//     top: 18px;
+//     width: 24px;
+//     background: #040418;
+//     height: 24px;
+//     border-radius: 30px;
+//     border: 2px solid var(--p-dark);
+//     @media screen and (max-width: 767px) {
+//       display: none;
+//     }
+// `
 const Text = styled.span`
 margin-left: 10px;
 font-size: var(--p-s-text);
@@ -86,15 +86,15 @@ function Aside(props){
 
   return (
       <Container className={sidebarClass}>
-      <Button onClick={props.toggleSidebar}>
+      {/* <Button onClick={props.toggleSidebar}>
       <BiAdjust />
-      </Button>
-      <div className='logo'>
+      </Button> */}
+      {/* <div className='logo'>
         <ItemLogo to='/'>
           <img className='logoimg' src={Logo} alt='logo' />
           <Text className={TextClass}>Colorfully.mn</Text>
         </ItemLogo>
-      </div>
+      </div> */}
       <div className='navbar'>
           <Item exact="true" to='/' activeclassname="active">
           <Text><BiCategory /></Text>

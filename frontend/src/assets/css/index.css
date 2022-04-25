@@ -20,12 +20,14 @@ body {
   font-family: 'Inter', sans-serif;
   height: 100vh;
   background: var(--p-bg);
-  color: var(--p-dark);
 }
 main{
   width: calc(100% - 15rem);
   position: absolute;
   right: 0;
+}
+main.main {
+  width: 100%;
 }
 a {
   text-decoration: none;
@@ -36,17 +38,14 @@ svg#svg {
 }
 .heading {
   font-size: 2rem;
+  font-weight: 100;
   width: 80%;
-  margin: 10px auto 50px;
+  margin: 30px auto;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: var(--p-dark);
-}
-.heading p {
-  font-size: 28px;
-  color: var(--p-dark-4);
+  padding-bottom: 20px;
+  justify-content: center;
+  border-bottom: 1px dotted;
 }
 .form,
 .content {

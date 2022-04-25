@@ -1,0 +1,19 @@
+.home_container {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+.post-items{
+    display: flex;
+}
+.post-item{
+    background-color: #040418;
+    background-color: var(--p-dark);
+    border-radius: 10px;
+    color: #999;
+    color: var(--p-gray);
+    margin: 10px auto;
+    padding: 20px 10px 10px;
+    position: relative;
+}

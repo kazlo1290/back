@@ -1,3 +1,6 @@
+.header-items {
+    display: flex;
+}
 .header-item{
     display: flex;
 }
