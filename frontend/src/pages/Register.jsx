@@ -17,6 +17,9 @@ function Register() {
   // Style
   const Item = styled(NavLink)`
   color: var(--p-dark-6);
+  &:hover{
+    text-decoration: underline;
+  }
   `
 
   // User Auth

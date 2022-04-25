@@ -1,16 +1,3 @@
-
-:root {
-  --p-white: #fff;
-  --p-bg: #f0f2f5;
-  --p-dark: #040418;
-  --p-dark-6: rgb(4, 4, 24, .6);
-  --p-dark-4: rgb(4, 4, 24, .4);
-  --p-dark-1: rgb(4, 4, 24, .1);
-  --p-pink: #ff6279;
-  --p-input-text: #ecebeb;
-  --p-gray: #999;
-  --p-s-text: 14px;
-}
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +7,8 @@ body {
   font-family: 'Inter', sans-serif;
   height: 100vh;
   background: var(--p-bg);
+  overflow-y: scroll;
+  overflow-x: auto;
 }
 main{
   width: calc(100% - 15rem);
@@ -138,22 +127,12 @@ svg#svg {
 }
 /* Scroll */
 ::-webkit-scrollbar{
-	width: 16px;
+	width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track{
-	background: var(--p-white);
-	/* border-radius: 8px; */
+	background: var(--p-bg);
 }
 ::-webkit-scrollbar-thumb{
 	background: var(--p-dark);
-	height: 56px;
-  border-radius: 8px;
-  border: 4px solid transparent;
-  background-clip: content-box;
-}
-@media screen and (max-width: 767px) {
-  main {
-    width: 100%;
-    top: 70px;
-  }
 }

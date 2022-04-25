@@ -1,0 +1,31 @@
+:root {
+    /* Color */
+    --p-white: rgb(255, 255, 255);
+    --p-bg: rgb(240, 242, 245);
+    --p-dark: rgb(4, 4, 24);
+    --p-dark-6: rgb(4, 4, 24, .6);
+    --p-dark-4: rgb(4, 4, 24, .4);
+    --p-dark-1: rgb(4, 4, 24, .1);
+    --p-pink: rgb(255, 98, 121);
+    --p-pink-8: rgb(255, 98, 121, .8);
+    --p-input-text: rgb(236, 235, 235);
+    --p-gray: rgb(153, 153, 153);
+    /* Font */
+    --p-s-text: 14px;
+    /* Size */
+    --p-s05: 5px;
+    --p-s10: 10px;
+    --p-s20: 20px;
+    --p-s25: 25px;
+    --p-s30: 30px;
+    --p-s35: 35px;
+    --p-s60: 60px;
+    --p-s4r: 4rem;
+    --p-s100v: 100%;
+    --p-s100vh: 100vh;
+    --p-s100vw: 100vw;
+  
+    /* Box */
+    --p-bs-box: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(0, 0, 0, 0.1) 0px 8px 16px 0px;
+    --p-bs-header: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+  }

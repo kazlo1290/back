@@ -7,33 +7,21 @@ import '../assets/css/aside.css'
 const Container = styled.aside`
   position: fixed;
   display: flex;
-  height: 100vh;
-  top: 60px;
+  height: var(--p-s100vh);
+  top: var(--p-s60);
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0 0 20px 0;
+  padding: 0 0 var(--p-s20) 0;
   transition: width 0.5s ease;
   background: var(--p-dark);
   z-index: 2;
   .active {
-  color: rgba(255, 98, 121, 0.8);
-  border-right: 4px solid rgba(255, 98, 121, 0.8);
+  color: var(--p-pink-8);
+  border-right: 4px solid var(--p-pink-8);
   svg {
-    fill: rgba(255, 98, 121, 1);
+    fill: var(--p-pink-8);
   }
-  }
-
-  @media screen and (max-width: 767px) {
-    width: 100%;
-    height: 4rem;
-    flex-direction: row;
-    padding: 0 10px;
-    align-items: center;
-    .active {
-      border-right: none;
-      border-bottom: 4px solid rgba(255, 98, 121, 0.8);
-    }
   }
 `
 const Item = styled(NavLink)`
@@ -45,12 +33,6 @@ display: flex;
     svg{
       fill: var(--p-pink);
     }
-  }
-  @media screen and (max-width: 767px) {
-    height: 4rem;
-    border-right: none;
-    border-bottom: 4px solid transparent;
-    padding: 20px 17px 16px;
   }
 `
 // const ItemLogo = styled(Link)`
@@ -68,9 +50,6 @@ display: flex;
 //     height: 24px;
 //     border-radius: 30px;
 //     border: 2px solid var(--p-dark);
-//     @media screen and (max-width: 767px) {
-//       display: none;
-//     }
 // `
 const Text = styled.span`
 margin-left: 10px;

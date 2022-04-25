@@ -39,8 +39,8 @@ function PostsPage() {
 
   return (
     <>
-    <Aside />
-    <main>
+    <main className='main'>
+      <Aside />
       <Header />
       <section className='heading'>
         <h1>Тавтай Морилно уу {user && user.name}</h1>

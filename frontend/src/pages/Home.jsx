@@ -1,6 +1,6 @@
 import React from 'react'
-import PostsJSX from '../components/Posts'
-// import PostOff from '../components/PostOff';
+// import PostsJSX from '../components/Posts'
+import PostOff from '../components/PostOff';
 import Header from '../components/Header'
 import { Helmet } from 'react-helmet'
 import '../assets/css/home.css'
@@ -22,8 +22,8 @@ function Home() {
         <br />
         <h3>Нийт Нийтлэл</h3>
         <br/>
-        <PostsJSX />
-        {/* <PostOff /> */}
+        {/* <PostsJSX /> */}
+        <PostOff />
       </section>
     </main>
     </>

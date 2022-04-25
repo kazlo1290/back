@@ -3,10 +3,6 @@
     height: 60px;
     padding: 10px;
 }
-.logoimg {
-    width: 40px;
-    height: 40px;
-}
 .navbar {
     display: flex;
     flex-direction: column;
@@ -16,11 +12,6 @@
 }
 .navbar.space{
     margin-top: auto;
-}
-svg{
-    width: 20px;
-    height: 20px;
-    fill: var(--p-white);
 }
 .ContainerOpen{
     width: 15rem;
@@ -44,19 +35,4 @@ svg{
     text-align: center;
     appearance: button;
     padding: 13px 28px;
-}
-@media screen and (max-width: 767px) {
-    .navbar {
-        flex-direction: row;
-        margin: 0;
-        justify-content: flex-end;
-        border-top: none;
-    }
-    .navbar.space{
-        margin: 0;
-        justify-content: flex-start;
-    }
-    .primary_btn {
-        padding: 20px 17px;
-    }
 }
