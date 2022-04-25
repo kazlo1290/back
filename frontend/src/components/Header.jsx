@@ -6,10 +6,15 @@ import { logout, reset } from '../api/auth/authSlice'
 // import { FaBeer } from 'react-icons/fa';
 import Logo from '../assets/img/logoimg.jpg'
 import '../assets/css/header.css'
-const Container = styled.header`
+  const Container = styled.header`
+    background: var(--p-white);
+  `
+  const SubContainer = styled.div`
     display: flex;
     width: var(--p-s100v);
+    max-width: 1040px;
     padding: 0 var(--p-s20);
+    margin: 0 auto;
     justify-content: flex-end;
     background: var(--p-white);
     right: 0;
@@ -21,8 +26,8 @@ const Container = styled.header`
         fill: var(--p-pink-8);
     }
     }
-`
-const Item = styled(NavLink)`
+  `
+  const Item = styled(NavLink)`
     display: flex;
     padding: var(--p-s10);
     margin: 0 var(--p-s10);
@@ -35,18 +40,18 @@ const Item = styled(NavLink)`
       fill: var(--p-pink);
     }
   }
-`
-const ItemLogo = styled(Link)`
-  padding: 0;
-  display: flex;
-  align-items: center;
-  color: var(--p-dark);
-`
-const Text = styled.span`
+  `
+  const ItemLogo = styled(Link)`
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: var(--p-dark);
+  `
+  const Text = styled.span`
     font-size: var(--p-s-text);
     line-height: 24px;
     height: 24px;
-`
+  `
 function Header() {
     // User Auth
     const navigate = useNavigate()
@@ -61,6 +66,7 @@ function Header() {
 
     return (
         <Container>
+          <SubContainer>
           <div className="header-items">
             <ItemLogo to='/'>
               <img className='logoimg' src={Logo} alt='logo' />
@@ -106,6 +112,7 @@ function Header() {
             </div>
             )} 
           </div>
+          </SubContainer>
         </Container>
     );
 };

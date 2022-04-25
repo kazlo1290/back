@@ -1,6 +1,6 @@
 import React from 'react'
-// import PostsJSX from '../components/Posts'
-import PostOff from '../components/PostOff';
+import PostsJSX from '../components/Posts'
+// import PostOff from '../components/PostOff';
 import Header from '../components/Header'
 import { Helmet } from 'react-helmet'
 import '../assets/css/home.css'
@@ -14,17 +14,19 @@ function Home() {
     </Helmet>
     <main className='main' >
       <Header />
-      <section className='heading'>  
+      <div className='home_container'>
+      <section className='heading maxw'>  
         <p>Мэдээний самбар</p>
       </section>
 
-      <section className='home_container'>
+      <section className='posts_container maxw'>
         <br />
         <h3>Нийт Нийтлэл</h3>
         <br/>
-        {/* <PostsJSX /> */}
-        <PostOff />
+        <PostsJSX />
+        {/* <PostOff /> */}
       </section>
+      </div>
     </main>
     </>
   )
