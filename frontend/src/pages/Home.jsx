@@ -1,5 +1,5 @@
 import React from 'react'
-import PostsJSX from '../components/Posts'
+// import PostsJSX from '../components/Posts'
 import PostOff from '../components/PostOff';
 import Header from '../components/Header'
 import { Helmet } from 'react-helmet'
@@ -19,12 +19,12 @@ function Home() {
       <section className='posts_container'>
         <Tabs>
         <div label="Latest">
-          <PostsJSX />
-          {/* <PostOff /> */}
+          {/* <PostsJSX /> */}
+          <PostOff />
         </div>
         <div label="Top">
-          <PostsJSX />
-          {/* <PostOff /> */}
+          {/* <PostsJSX /> */}
+          <PostOff />
         </div>
         <div label="Favorite">
           <Tabs>
@@ -33,7 +33,7 @@ function Home() {
             </div>
             <div label="sdf">
               <section className='content'>
-              <PostsJSX />
+              {/* <PostsJSX /> */}
               </section>
             </div>
           </Tabs>
