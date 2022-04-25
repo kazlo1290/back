@@ -32,7 +32,7 @@ if (isLoading) {
     <>
 
 
-      <section className='content'>
+      <section className='post_content'>
         {posts.length > 0 ? (
           <div className='post-items'>
             {posts.map((post) => (

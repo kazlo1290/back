@@ -40,7 +40,7 @@ function PostForm() {
                     />
                 </div>
                 <div className='form-group'>
-                    <button className='btn btn-block' type='submit'>
+                    <button className='' type='submit'>
                         Нийтлэл Нэмэх
                     </button>
                 </div>

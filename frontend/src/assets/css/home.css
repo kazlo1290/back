@@ -9,17 +9,3 @@
     flex-direction: column;
     width: 100%;
 }
-.post-items{
-    display: flex;
-    flex-wrap: wrap;
-}
-.post-item{
-    background-color: #040418;
-    background-color: var(--p-dark);
-    border-radius: 10px;
-    color: #999;
-    color: var(--p-gray);
-    margin: 10px auto;
-    padding: 20px 10px 10px;
-    position: relative;
-}

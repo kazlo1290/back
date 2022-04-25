@@ -24,10 +24,10 @@ main.main {
 }
 a {
   text-decoration: none;
-  color: var(--p-white);
+  color: var(--p-dark);
 }
-svg#svg {
-  fill: var(--p-dark);
+a:hover {
+  color: var(--p-pink);
 }
 .heading {
   font-size: 2rem;
@@ -94,11 +94,23 @@ svg#svg {
   width: 100%;
   margin-bottom: 20px;
 }
-
+.primary_btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  appearance: button;
+  padding: 5px 28px;
+}
 .btn:hover {
   transform: scale(0.98);
 }
-
+button {
+  font-family: 'Inter', sans-serif;
+}
 .loadingSpinnerContainer {
   position: fixed;
   top: 0;
@@ -154,7 +166,6 @@ svg#svg {
 .tab-list-item:hover {
   background: var(--p-white);
   color: var(--p-pink);
-  font-weight: 600;
 }
 
 .tab-list-active {

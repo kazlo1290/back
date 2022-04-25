@@ -1,68 +1,51 @@
 import React from "react";
+import Avatar from '../assets/img/avatar.png'
+import '../assets/css/posts.css'
 
 function PostOff() {
     return (
-        <section className='content'>
+        <section className='post_content'>
             <div className='post-items'>
                 <div className='post-item'>
-                    <h2>TwerwerewrwerwerwerweEST 1</h2>
-                    <h3>22/werwe04/25/01/11</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>Teswerewt 2</h2>
-                    <h3>22/werew04/25/12/28</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>TESewT 1</h2>
-                    <h3>22/werwer/25/01/11</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>Test 2</h2>
-                    <h3>22/04/25/12/28</h3>
-                    <h3>kazewrewlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>werewr 1</h2>
-                    <h3>22/04/25/01/11</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>Test 2</h2>
-                    <h3>22/04/25/12/28</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>TEewrwerST 1</h2>
-                    <h3>22/04/25/01/11</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>wer 2</h2>
-                    <h3>22/04/25/12/28</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>wrwerwer werttew terwt  1</h2>
-                    <h3>22/werwer04/25/01/11</h3>
-                    <h3>kaewrewzlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>Test 2</h2>
-                    <h3>22/04/25/12/28</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>TESwerweT 1</h2>
-                    <h3>22/04/25/01/11</h3>
-                    <h3>kazlo</h3>
-                </div>
-                <div className='post-item'>
-                    <h2>Test 2</h2>
-                    <h3>22/ertert04/25/12/28</h3>
-                    <h3>kazlo</h3>
+                    <div className="user_md">
+                        <div className='user_img'>
+                            <a href="/"><img src={Avatar} alt='User' /></a>
+                        </div>
+                        <div className="user_name">
+                            <button className='user_name_link'>
+                            <a href="/">Kazlo</a>
+                            </button>
+                            <div className="user_post_time">
+                                Apr 25 /2022
+                            </div>
+                        </div>
+                    </div>
+                    <div className="user_post_container">
+                        <a className="user_post_title" href="/"><h2>TwerwerewrwerwerwerweEST 1</h2></a>
+                        <div className="user_post_hashtags">
+                            <a className="user_post_hashtag" href="/">#top</a>
+                            <a className="user_post_hashtag" href="/">#top</a>
+                            <a className="user_post_hashtag" href="/">#top</a>
+                            <a className="user_post_hashtag" href="/">#top</a>
+                        </div>
+                        <div className="user_post_content">
+                            <p>
+                            The debate over whether one monitor is better than multiple monitors has been going on for years. 
+                            There are many factors to consider when deciding which monitor setup is best for you, 
+                            such as your work environment, the size and type of your display, and the number of applications you use on a daily basis.
+                            </p>
+                            <p>
+                            The debate over whether one monitor is better than multiple monitors has been going on for years. 
+                            There are many factors to consider when deciding which monitor setup is best for you, 
+                            such as your work environment, the size and type of your display, and the number of applications you use on a daily basis.
+                            </p>
+                        </div>
+                        <div className="user_post_full">
+                            <button className='user_post_link'>
+                                <a className="user_post_link_a" href="/">Цааш</a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
