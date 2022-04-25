@@ -18,6 +18,10 @@ main{
 main.main {
   width: 100%;
 }
+.maxw {
+  max-width: 1040px;
+  margin: auto
+}
 a {
   text-decoration: none;
   color: var(--p-white);
@@ -33,7 +37,7 @@ svg#svg {
   text-align: center;
   display: flex;
   padding-bottom: 20px;
-  justify-content: center;
+  justify-content: flex-start;
   border-bottom: 1px dotted;
 }
 .form,
@@ -135,4 +139,25 @@ svg#svg {
 }
 ::-webkit-scrollbar-thumb{
 	background: var(--p-dark);
+}
+.tab-list {
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  padding: 0.75rem 1rem;
+  color: var(--p-dark-6);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.tab-list-item:hover {
+  background: var(--p-white);
+  color: var(--p-pink);
+  font-weight: 600;
+}
+
+.tab-list-active {
+  color: var(--p-dark);
+  font-weight: 600;
 }

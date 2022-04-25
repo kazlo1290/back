@@ -8,8 +8,6 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import PostsPage from './pages/PostsPage'
 import Changelog from './pages/Changelog'
-// import Aside from './components/Aside'
-// import Main from './components/Main'
 function App() {
   // const [sidebarOpen, setSideBarOpen] = useState(false);
   // const handleViewSidebar = () => {

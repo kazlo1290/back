@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../api/auth/authSlice'
-// import { FaBeer } from 'react-icons/fa';
 import Logo from '../assets/img/logoimg.jpg'
 import '../assets/css/header.css'
   const Container = styled.header`
     background: var(--p-white);
+    box-shadow: var(--p-bs-header);
   `
   const SubContainer = styled.div`
     display: flex;
@@ -16,10 +16,8 @@ import '../assets/css/header.css'
     padding: 0 var(--p-s20);
     margin: 0 auto;
     justify-content: flex-end;
-    background: var(--p-white);
     right: 0;
     justify-content: space-between;
-    box-shadow: var(--p-bs-header);
     .active {
         color: var(--p-pink-8);
     svg {
@@ -33,6 +31,7 @@ import '../assets/css/header.css'
     margin: 0 var(--p-s10);
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: var(--p-dark);
     &:hover {
     color: var(--p-pink);
@@ -84,29 +83,25 @@ function Header() {
           <div className="header-items">
             <div className="header-item">
             <Item exact="true" to='/' activeclassname="active">
-            {/* <Text><FaBeer/></Text> */}
             <Text>Home</Text>
             </Item>
             <Item to='/changelog' activeclassname="active">
-            {/* <Text><FaBeer/></Text> */}
             <Text>ChangeLog</Text>
             </Item>
             </div>
             {user ? (
             <div className='header-item'>
               <Item to='/dashboard' activeclassname="active">
-              {/* <Text><FaBeer/></Text> */}
               <Text>Dashboard</Text>
               </Item>
               <button className='primary_btn' onClick={onLogout}>
-              {/* <Text><FaBeer/></Text> */}
               <Text>Гарах</Text>
               </button>
             </div>
             ) : (
             <div className='header-item'>
               <Item to='/login' activeclassname="active">
-              {/* <Text><FaBeer/></Text> */}
+              
               <Text>Нэвтрэх</Text>
               </Item>
             </div>

@@ -1,9 +1,10 @@
 import React from 'react'
-import PostsJSX from '../components/Posts'
-// import PostOff from '../components/PostOff';
+// import PostsJSX from '../components/Posts'
+import PostOff from '../components/PostOff';
 import Header from '../components/Header'
 import { Helmet } from 'react-helmet'
 import '../assets/css/home.css'
+import Tabs from '../components/Tabs'
 function Home() {
   // Title
   const TITLE = 'Энгийн өнгө'
@@ -12,19 +13,32 @@ function Home() {
     <Helmet>
       <title>{ TITLE }</title>
     </Helmet>
-    <main className='main' >
       <Header />
-      <div className='home_container'>
-      <section className='heading maxw'>  
-        <p>Мэдээний самбар</p>
-      </section>
-
-      <section className='posts_container maxw'>
-        <br />
-        <h3>Нийт Нийтлэл</h3>
-        <br/>
-        <PostsJSX />
-        {/* <PostOff /> */}
+    <main className='main' >
+      <div className='home_container maxw'>
+      <section className='posts_container'>
+        <Tabs>
+        <div label="Latest">
+          {/* <PostsJSX /> */}
+          <PostOff />
+        </div>
+        <div label="Top">
+          {/* <PostsJSX /> */}
+          <PostOff />
+        </div>
+        <div label="Favorite">
+          <Tabs>
+            <div label="df">
+              <PostOff />
+            </div>
+            <div label="sdf">
+              <section className='content'>
+              <h1>TEST</h1>
+              </section>
+            </div>
+          </Tabs>
+        </div>
+      </Tabs>
       </section>
       </div>
     </main>

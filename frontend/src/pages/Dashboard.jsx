@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import Aside from '../components/Aside';
 import Header from '../components/Header'
 import { Helmet } from 'react-helmet'
 
@@ -22,9 +21,9 @@ function Dashboard() {
     <Helmet>
       <title>{ TITLE }</title>
     </Helmet>
-    <main className='main'>
-      <Aside />
       <Header />
+    <main className='main'>
+    <div className='home_container maxw'>
       <section className='heading'>
         <h1>Тавтай Морилно уу {user && user.name}</h1>
         <p>Мэдээний самбар</p>
@@ -38,6 +37,7 @@ function Dashboard() {
           </li>
         </ul>
       </section>
+    </div>
     </main>
     </>
   )
