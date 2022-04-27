@@ -3,6 +3,9 @@ const bcrypt = require('bcryptjs')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
 const Role = require('../models/roleModel')
+const sadminRole = '0'
+// const adminRole = '1'
+// const customerRole = '2'
 
 // @desc Register New User
 // @route POST /api/users
@@ -26,7 +29,7 @@ const registerUser = asyncHandler(async (req, res) => {
     // Нууц үг Hash
     const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(password, salt)
-    const role = '3'
+    const role = '2'
     // Шинэ хэрэглэгч
     const user = await User.create({
         name,
@@ -52,12 +55,16 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc Authenticate a User
 // @route POST /api/users/login
 // @access Public
-const loginUser = asyncHandler(async (req, res) => {
+const loginCustomer = asyncHandler(async (req, res) => {
     const {email, password} = req.body
 
     // email шалгах
     const user = await User.findOne({email})
 
+    if(!user){
+        res.status(400)
+        throw new Error('Хаяг олдсонгүй')
+    }
     if(user && (await bcrypt.compare(password, user.password))) {
         res.json({
             _id: user.id,
@@ -66,12 +73,43 @@ const loginUser = asyncHandler(async (req, res) => {
             role: user.role,
             token: generateToken(user._id),
         })
-    } else {
+    } else if(password !== user.password){
         res.status(400)
-        throw new Error('Аль нэг буруу')
+        throw new Error('Нууц үг буруу')
     }
 })
 
+
+// @desc Authenticate a User
+// @route POST /api/users/admin/login
+// @access Public
+const loginSAdmin = asyncHandler(async (req, res) => {
+    const {email, password} = req.body
+
+    // email шалгах
+    const user = await User.findOne({email})
+
+    if(!user){
+        res.status(400)
+        throw new Error('Хаяг олдсонгүй')
+    }
+    if(sadminRole !== user.role){
+        res.status(400)
+        throw new Error('Нэвтрэх эрхгүй')  
+    }
+    if(user && (await bcrypt.compare(password, user.password))) {
+        res.json({
+            _id: user.id,
+            name: user.name,
+            email: user.email,
+            role: user.role,
+            token: generateToken(user._id),
+        })
+    } else if(password !== user.password){
+        res.status(400)
+        throw new Error('Нууц үг буруу')
+    }
+})
 // @desc Get User Data
 // @route GET /api/users/me
 // @access Private
@@ -90,9 +128,15 @@ const getMe = asyncHandler(async (req, res) => {
 // @route GET /api/users/all
 // @access Public
 const getAllUser = asyncHandler(async (req, res) => {
-    const user = await User.find() 
+    const user = await User.findById(req.user.id) 
+    const alluser = await User.find()
 
-    res.status(200).json(user)
+    if(sadminRole !== user.role){
+        res.status(400)
+        throw new Error('Нэвтрэх эрхгүй')  
+    }else {
+        res.status(200).json(alluser)
+    }
 })
 
 
@@ -151,7 +195,8 @@ const generateToken = (id) => {
 
 module.exports = {
     registerUser,
-    loginUser,
+    loginCustomer,
+    loginSAdmin,
     getMe,
     getAllUser,
     updateUser,

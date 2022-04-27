@@ -2,7 +2,8 @@ const express = require('express')
 const router = express.Router()
 const { 
     registerUser, 
-    loginUser, 
+    loginCustomer, 
+    loginSAdmin,
     getMe, 
     getAllUser,
     updateUser,
@@ -11,9 +12,11 @@ const {
 const {protect} = require('../middleware/authMiddleware')
 
 router.post('/', registerUser)
-router.post('/login', loginUser)
+router.route('/login').post(loginCustomer)
 router.get('/all', protect, getAllUser)
 router.get('/me', protect, getMe)
 router.route('/:id').put(protect, updateUser).delete(protect, deleteUser)
 
+
+router.route('/admin/login').post(loginSAdmin)
 module.exports = router

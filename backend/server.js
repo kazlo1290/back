@@ -13,7 +13,7 @@ const app = express()
 app.use(cors());
 
 var corsOptions = {
-  origin: 'http://colorfully.mn',
+  origin: 'https://colorfully.mn',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
