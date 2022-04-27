@@ -12,6 +12,11 @@ connectDB()
 const app = express()
 app.use(cors());
 
+var corsOptions = {
+  origin: 'http://colorfully.mn',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
@@ -23,13 +28,13 @@ app.use('/api/roles', require('./routes/roleRoutes'))
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../frontend/build')))
   
-    app.get('*', (req, res) =>
+    app.get('*', cors(corsOptions), (req, res, next) =>
       res.sendFile(
         path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
       )
     )
   } else {
-    app.get('/', (req, res) => res.send('production дээр тохируулна уу'))
+    app.get('/', cors(corsOptions), (req, res, next) => res.send('production дээр тохируулна уу'))
   }
   
 app.use(errorHandler)
