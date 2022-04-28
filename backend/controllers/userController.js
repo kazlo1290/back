@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
-const Role = require('../models/roleModel')
 const sadminRole = '0'
 // const adminRole = '1'
 // const customerRole = '2'
@@ -40,7 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
     if(user) {
         res.status(201).json({
-            id: user.id,
+            _id: user.id,
             name: user.name,
             email: user.email,
             role: user.role,
