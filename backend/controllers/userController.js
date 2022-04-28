@@ -156,12 +156,18 @@ const updateUser = asyncHandler(async (req, res) => {
         res.status (401)
         throw new Error('Хэрэглэгч зөвшөөрөлгүй')
     }
+    const {role} = req.body
 
+    if(!role){
     const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, {
         new: true,
     })
 
     res.status(200).json(updatedUser)
+    }else {
+        res.status (401)
+        throw new Error('Role өөрчлөх эрхгүй')
+    }
 
 })
 

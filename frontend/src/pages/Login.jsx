@@ -39,7 +39,6 @@ function Login() {
   useEffect(() => {
     if (isError) {
       toast.error(message)
-      toast.error('Алдаа')
     }
 
     if (isSuccess || user) {

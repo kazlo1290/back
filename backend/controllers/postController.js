@@ -2,6 +2,9 @@ const asyncHandler = require('express-async-handler')
 
 const Post = require('../models/postModel')
 const User = require('../models/userModel')
+const sadminRole = '0'
+// const adminRole = '1'
+// const customerRole = '2'
 
 // @desc Get Posts
 // @route GET /api/posts
@@ -17,8 +20,14 @@ const getPosts = asyncHandler(async (req, res) => {
 // @access Public
 const getAllPosts = asyncHandler(async (req, res) => {
     const posts = await Post.find()
+    const user = await User.findById(req.user.id)
 
+    if(sadminRole !== user.role){
+        res.status(400)
+        throw new Error('Эрхгүй')  
+    }else {
     res.status(200).json(posts)
+    }
 })
 
 // @desc Set Posts
@@ -27,7 +36,7 @@ const getAllPosts = asyncHandler(async (req, res) => {
 const setPosts = asyncHandler(async (req, res) => {
     if (!req.body.title ||!req.body.content) {
         res.status(400)
-        throw new Error('Утга нэмнэ үү')
+        throw new Error('Хоосон байна')
     }
 
     const post = await Post.create({
@@ -97,7 +106,11 @@ const deletePosts = asyncHandler(async (req, res) => {
         res.status (401)
         throw new Error('Хэрэглэгч зөвшөөрөлгүй')
     }
-
+    // // Админ болон хэрэглэгч өөрөө биш үед
+    // if(post.user.toString() !== user.id && sadminRole !== user.role) {
+    //     res.status (401)
+    //     throw new Error('Хэрэглэгч зөвшөөрөлгүй')
+    // }
     await post.remove()
 
     res.status(200).json({ id: req.params.id })
