@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
-
+const moment = require('moment');
+const dateYMD = moment().format('L')
+const dateT = moment().format('LT')
 const userSchema = mongoose.Schema(
     {
     username: {
@@ -34,20 +36,18 @@ const userSchema = mongoose.Schema(
     },
     registeredDate: { 
         type: String, 
-        default: Date,
-        timezone: "+0800",
+        default: dateYMD,
         required: true,
     },
     lastActive: { 
         type: String, 
         default: Date,
-        timezone: "+0800",
         required: true,
     },
 },
-{
-    timestamps: true,
-}
+// {
+//     timestamps: true,
+// }
 )
 
 module.exports = mongoose.model('User', userSchema)

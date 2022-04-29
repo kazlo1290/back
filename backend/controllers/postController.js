@@ -10,7 +10,7 @@ const sadminRole = '0'
 // @route GET /api/posts
 // @access Private
 const getPosts = asyncHandler(async (req, res) => {
-    const posts = await Post.find({ user: req.user.id }).sort([['Date', -1]])
+    const posts = await Post.find({ user: req.user.id }).sort([['createdAt', -1]])
 
     res.status(200).json(posts)
 })
@@ -19,7 +19,7 @@ const getPosts = asyncHandler(async (req, res) => {
 // @route GET /api/posts/all
 // @access Public
 const getAllPosts = asyncHandler(async (req, res) => {
-    const posts = await Post.find().sort([['Date', -1]])
+    const posts = await Post.find().sort({ createdAt: -1})
     // const user = await User.findById(req.user.id)
 
     // if(sadminRole !== user.role){

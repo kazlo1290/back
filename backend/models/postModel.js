@@ -1,5 +1,9 @@
 const mongoose = require('mongoose')
-
+const moment = require('moment');
+// const date = moment(new Date())
+const locale = moment.locale();
+const dateYMD = moment().format('L')
+const dateT = moment().format('LT')
 const postSchema = mongoose.Schema(
     {
     user: {
@@ -18,11 +22,16 @@ const postSchema = mongoose.Schema(
     imagePath: {
         type: String,
         },
-    Date: { 
+    dateYMD: { 
         type: String, 
-        default: Date, 
+        default: dateYMD, 
         required: true,
         },
+    dateT: {
+        type: String,
+        default: dateT,
+        required: true,
+    },
     author: { 
         type: String, 
         ref: "User", 
@@ -34,7 +43,7 @@ const postSchema = mongoose.Schema(
     },
     },
     {
-    timestamps: true,
+        timestamps: true,
     }
 )
 
