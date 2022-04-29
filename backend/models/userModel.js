@@ -35,11 +35,13 @@ const userSchema = mongoose.Schema(
     registeredDate: { 
         type: String, 
         default: Date,
+        timezone: "+0800",
         required: true,
     },
     lastActive: { 
         type: String, 
         default: Date,
+        timezone: "+0800",
         required: true,
     },
 },
