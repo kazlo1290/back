@@ -1,35 +1,26 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import Home from './pages/Home'
-import Dashboard from './pages/Dashboard'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import PostsPage from './pages/PostsPage'
-import Changelog from './pages/Changelog'
-function App() {
-  // const [sidebarOpen, setSideBarOpen] = useState(false);
-  // const handleViewSidebar = () => {
-  //   setSideBarOpen(!sidebarOpen);
-  // };
+import logo from './logo.svg';
+import './App.css';
 
+function App() {
   return (
-    <>
-      <Router>
-          {/* <Aside isOpen={sidebarOpen} toggleSidebar={handleViewSidebar} /> */}
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/posts' element={<PostsPage />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/changelog' element={<Changelog />} />
-        </Routes>
-      </Router>
-      <ToastContainer />
-    </>
-  )
+    <div className="App">
+      <div className="App-Container">
+        <div className="App-Content">
+        <img src={logo} className="App-logo" alt="logo" />
+        <div className="App-links">
+          <a className="App-link" href="https://admin.colorfully.mn"
+            target="_blank" rel="noopener noreferrer">
+            Админ
+          </a>  
+          <a className="App-link" href="https://colorfully.mn"
+            target="_blank" rel="noopener noreferrer">
+            Хэрэглэгч
+          </a> 
+          </div> 
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

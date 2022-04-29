@@ -20,8 +20,8 @@ var corsOptions = {
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
-app.use('/api/users', require('./routes/userRoutes'))
-app.use('/api/posts', require('./routes/postRoutes'))
+app.use('/users', require('./routes/userRoutes'))
+app.use('/posts', require('./routes/postRoutes'))
 
 // Serve frontend
 if (process.env.NODE_ENV === 'production') {

@@ -10,19 +10,31 @@ const sadminRole = '0'
 // @route POST /api/users
 // @access Public
 const registerUser = asyncHandler(async (req, res) => {
-    const { name, email, password} = req.body
+    const { username, name, email, phone, password} = req.body
 
-    if(!name || !email || !password) {
+    if(!username || !name || !password) {
          res.status(400)
          throw new Error('Утга нэмнэ үү')
     }
-
     // Хэрэв хэрэглэгч бүртгэлтэй бол
-    const userExists = await User.findOne({email})
-
-    if(userExists) {
+    const userNameExists = await User.findOne({username})
+    const userPhoneExists = await User.findOne({phone})
+    const userEmailExists = await User.findOne({email})
+    if(userNameExists) {
         res.status(400)
-        throw new Error('Хэрэглэгч бүртгэлтэй байна')
+        throw new Error('Нэвтрэх нэр бүртгэлтэй байна')
+    }
+    if(phone){
+        if(userPhoneExists) {
+            res.status(400)
+            throw new Error('Дугаар бүртгэлтэй байна')
+        }
+    }
+    if(email){
+        if(userEmailExists) {
+            res.status(400)
+            throw new Error('Имэйл бүртгэлтэй байна')
+        }
     }
 
     // Нууц үг Hash
@@ -31,8 +43,10 @@ const registerUser = asyncHandler(async (req, res) => {
     const role = '2'
     // Шинэ хэрэглэгч
     const user = await User.create({
+        username,
         name,
         email,
+        phone,
         password: hashedPassword,
         role,
     })
@@ -40,9 +54,12 @@ const registerUser = asyncHandler(async (req, res) => {
     if(user) {
         res.status(201).json({
             _id: user.id,
+            username: user.username,
             name: user.name,
             email: user.email,
+            phone: user.phone,
             role: user.role,
+            registeredDate: user.registeredDate,
             token: generateToken(user._id),
         })
     } else {
@@ -55,10 +72,10 @@ const registerUser = asyncHandler(async (req, res) => {
 // @route POST /api/users/login
 // @access Public
 const loginCustomer = asyncHandler(async (req, res) => {
-    const {email, password} = req.body
+    const {username, password} = req.body
 
     // email шалгах
-    const user = await User.findOne({email})
+    const user = await User.findOne({username})
 
     if(!user){
         res.status(400)
@@ -67,9 +84,13 @@ const loginCustomer = asyncHandler(async (req, res) => {
     if(user && (await bcrypt.compare(password, user.password))) {
         res.json({
             _id: user.id,
+            username: user.username,
             name: user.name,
             email: user.email,
+            phone: user.phone,
             role: user.role,
+            registeredDate: user.registeredDate,
+            lastActive: user.lastActive,
             token: generateToken(user._id),
         })
     } else if(password !== user.password){
@@ -113,19 +134,14 @@ const loginSAdmin = asyncHandler(async (req, res) => {
 // @route GET /api/users/me
 // @access Private
 const getMe = asyncHandler(async (req, res) => {
-    const { _id, name, email, role } = await User.findById(req.user.id) 
+    const user = await User.findById(req.user.id) 
 
-    res.status (200).json({
-        id: _id,
-        name,
-        email,
-        role,
-    })
+    res.status (200).json({user})
 })
 
 // @desc Get User Data
 // @route GET /api/users/all
-// @access Public
+// @access Private
 const getAllUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user.id) 
     const alluser = await User.find()
@@ -137,7 +153,6 @@ const getAllUser = asyncHandler(async (req, res) => {
         res.status(200).json(alluser)
     }
 })
-
 
 // @desc Update User Data
 // @route PUT /api/users/:id
@@ -156,7 +171,6 @@ const updateUser = asyncHandler(async (req, res) => {
         throw new Error('Хэрэглэгч зөвшөөрөлгүй')
     }
     const {role} = req.body
-
     if(!role){
     const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, {
         new: true,
