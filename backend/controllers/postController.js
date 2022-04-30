@@ -122,7 +122,10 @@ const deletePosts = asyncHandler(async (req, res) => {
     // }
     await post.remove()
 
-    res.status(200).json({ id: req.params.id })
+    res.status(200).json({ 
+        id: req.params.id,
+        message: 'Нийтлэл амжилттай устгалаа'
+    })
 })
 
 module.exports = {
