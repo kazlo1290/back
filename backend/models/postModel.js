@@ -1,9 +1,5 @@
 const mongoose = require('mongoose')
-const moment = require('moment');
-// const date = moment(new Date())
-const locale = moment.locale();
-const dateYMD = moment().format('L')
-const dateT = moment().format('LT')
+
 const postSchema = mongoose.Schema(
     {
     user: {
@@ -22,14 +18,14 @@ const postSchema = mongoose.Schema(
     imagePath: {
         type: String,
         },
-    dateYMD: { 
-        type: String, 
-        default: dateYMD, 
-        required: true,
-        },
-    dateT: {
+    status: {
         type: String,
-        default: dateT,
+        enum: ["ноорог", "нийтэлсэн", "устгасан"],
+        default: "ноорог"
+        },
+    date: {
+        type: String,
+        default: Date,
         required: true,
     },
     author: { 
@@ -42,8 +38,11 @@ const postSchema = mongoose.Schema(
         slug: "title",
     },
     },
-    {
-        timestamps: true,
+    { 
+        timestamps: { 
+        createdAt: 'c_date',
+        updatedAt: 'u_date',
+        }
     }
 )
 

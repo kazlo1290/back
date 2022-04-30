@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
-const moment = require('moment');
-const dateYMD = moment().format('L')
-const dateT = moment().format('LT')
+
 const userSchema = mongoose.Schema(
     {
     username: {
@@ -27,27 +25,31 @@ const userSchema = mongoose.Schema(
     },
     password: {
         type: String,
-        required: [true, 'Нууц үг']
+        required: [true, 'Нууц үг'],
+        length: 8,
     },
     role: { 
         type: String, 
         ref: "Role", 
         required: [true, 'Role']
     },
-    registeredDate: { 
-        type: String, 
-        default: dateYMD,
-        required: true,
-    },
-    lastActive: { 
-        type: String, 
+    date: {
+        type: String,
         default: Date,
         required: true,
     },
+    role: {
+        type: String,
+        enum: ["0", "1", "2"],
+        default: "2"
+    }
 },
-// {
-//     timestamps: true,
-// }
+    { 
+        timestamps: { 
+        createdAt: 'c_date',
+        updatedAt: 'u_date',
+        }
+    }
 )
 
 module.exports = mongoose.model('User', userSchema)

@@ -4,8 +4,8 @@
   "description": "Colorfully.mn ADMIN and API",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
+    "start": "node TZ=Asia/Ulaanbaatar backend/server.js",
+    "server": "nodemon TZ=Asia/Ulaanbaatar backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -19,10 +19,7 @@
     "express": "^4.17.3",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.29.3",
-    "moment-timezone": "^0.5.34",
-    "mongoose": "^6.2.8",
-    "mongoose-timezone": "^1.3.0"
+    "mongoose": "^6.2.8"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",

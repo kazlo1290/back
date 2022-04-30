@@ -40,7 +40,7 @@ const registerUser = asyncHandler(async (req, res) => {
     // Нууц үг Hash
     const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(password, salt)
-    const role = '2'
+    // const role = '2'
     // Шинэ хэрэглэгч
     const user = await User.create({
         username,
@@ -48,7 +48,7 @@ const registerUser = asyncHandler(async (req, res) => {
         email,
         phone,
         password: hashedPassword,
-        role,
+        // role,
     })
 
     if(user) {
@@ -59,7 +59,7 @@ const registerUser = asyncHandler(async (req, res) => {
             email: user.email,
             phone: user.phone,
             role: user.role,
-            registeredDate: user.registeredDate,
+            date: user.date,
             token: generateToken(user._id),
         })
     } else {
@@ -89,8 +89,7 @@ const loginCustomer = asyncHandler(async (req, res) => {
             email: user.email,
             phone: user.phone,
             role: user.role,
-            registeredDate: user.registeredDate,
-            lastActive: user.lastActive,
+            date: user.date,
             token: generateToken(user._id),
         })
     } else if(password !== user.password){
@@ -120,9 +119,12 @@ const loginSAdmin = asyncHandler(async (req, res) => {
     if(user && (await bcrypt.compare(password, user.password))) {
         res.json({
             _id: user.id,
+            username: user.username,
             name: user.name,
             email: user.email,
+            phone: user.phone,
             role: user.role,
+            date: user.date,
             token: generateToken(user._id),
         })
     } else if(password !== user.password){
@@ -170,7 +172,31 @@ const updateUser = asyncHandler(async (req, res) => {
         res.status (401)
         throw new Error('Хэрэглэгч зөвшөөрөлгүй')
     }
-    const {role} = req.body
+
+    // Хэрэв бүртгэлтэй бол
+    const {role, email, phone, username} = req.body
+    const userNameExists = await User.findOne({username})
+    const userPhoneExists = await User.findOne({phone})
+    const userEmailExists = await User.findOne({email})
+    if(username){
+        if(userNameExists) {
+            res.status(400)
+            throw new Error('Нэвтрэх нэр бүртгэлтэй байна')
+        }
+    }
+    if(phone){
+        if(userPhoneExists) {
+            res.status(400)
+            throw new Error('Дугаар бүртгэлтэй байна')
+        }
+    }
+    if(email){
+        if(userEmailExists) {
+            res.status(400)
+            throw new Error('Имэйл бүртгэлтэй байна')
+        }
+    }
+    // Хэрэв Role байвал
     if(!role){
     const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, {
         new: true,
@@ -203,7 +229,10 @@ const deleteUser = asyncHandler(async (req, res) => {
 
     await user.remove()
 
-    res.status(200).json({ id: req.user.id })
+    res.status(200).json({ 
+        id: req.user.id,
+        message: 'Хаяг амжилттай устгалаа'
+    })
 })
 // Generate JWT
 const generateToken = (id) => {
