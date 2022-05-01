@@ -38,11 +38,11 @@ app.use(
       extended: true
     })
 );
-app.use((req, res) => {
-    res.status(404).json({
-        errors: "Хуудас олдсонгүй"
-    })
-})
+// app.use((req, res) => {
+//     res.status(404).json({
+//         errors: "Хуудас олдсонгүй"
+//     })
+// })
 // Serve frontend
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../frontend/build')))

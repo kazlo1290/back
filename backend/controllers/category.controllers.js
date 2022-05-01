@@ -4,11 +4,11 @@ exports.createCategory = (req, res) => {
     let name = req.body.name
     let image = req.file.path
     console.log(name, image)
-    const categorys = new Category({
-        nameI: name,
-        imageI: image
+    const category = new Category({
+        name: name,
+        image: image
     })
-    categorys.save((err, category1) => {
+    category.save((err, category) => {
         if (err) {
             console.log(err)
             return res.status(400).json({
@@ -17,7 +17,7 @@ exports.createCategory = (req, res) => {
         }
         return res.json({
             message: "Амжилттай үүсгэлээ",
-            category1
+            category
         })
     })
 
