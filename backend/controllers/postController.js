@@ -56,7 +56,10 @@ const setPosts = asyncHandler(async (req, res) => {
         author: req.user.username,
     })
 
-    res.status(200).json(post)
+    res.status(200).json({
+        post,
+        message: 'Амжилттай'
+    })
 })
 
 // @desc Update Posts
@@ -115,11 +118,6 @@ const deletePosts = asyncHandler(async (req, res) => {
         res.status (401)
         throw new Error('Хэрэглэгч зөвшөөрөлгүй')
     }
-    // // Админ болон хэрэглэгч өөрөө биш үед
-    // if(post.user.toString() !== user.id && sadminRole !== user.role) {
-    //     res.status (401)
-    //     throw new Error('Хэрэглэгч зөвшөөрөлгүй')
-    // }
     await post.remove()
 
     res.status(200).json({ 

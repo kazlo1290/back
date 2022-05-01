@@ -60,12 +60,39 @@ const registerUser = asyncHandler(async (req, res) => {
             phone: user.phone,
             role: user.role,
             date: user.date,
+            c_date: user.c_date,
             token: generateToken(user._id),
         })
     } else {
         res.status(400)
         throw new Error('Зөв оруулна уу')
     }
+})
+
+// @desc Set Images
+// @route POST /users/uploads
+// @access Public
+const setImages = asyncHandler(async (req, res) => {
+    const user = await User.findById(req.user.id) 
+    let name = req.body.name
+    let image = req.file.path
+    console.log(name, image)
+    const newimages = new user({
+        profilePictureName: name,
+        profilePicture: image
+    })
+    newimages.save((err, images) => {
+        if (err) {
+            console.log(err)
+            return res.status(400).json({
+                errors: err.message
+            })
+        }
+        return res.json({
+            message: "Амжилттай үүсгэлээ",
+            images
+        })
+    })
 })
 
 // @desc Authenticate a User
@@ -146,7 +173,7 @@ const getMe = asyncHandler(async (req, res) => {
 // @access Private
 const getAllUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user.id) 
-    const alluser = await User.find()
+    const alluser = await User.find().sort([['c_date', -1]])
 
     if(sadminRole !== user.role){
         res.status(400)
@@ -160,21 +187,24 @@ const getAllUser = asyncHandler(async (req, res) => {
 // @route PUT /api/users/:id
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
-    const user = await User.findById(req.user.id) 
-
+    const user = await User.findById(req.body.id)
     // Хэрэглэгч шалгах
     if(!user) {
         res.status(401)
         throw new Error('Хэрэглэгч олдсонгүй')
     }
 
-    if(user.id !== user.id) {
-        res.status (401)
-        throw new Error('Хэрэглэгч зөвшөөрөлгүй')
-    }
-
+    if(req.body.id === req.params.id || req.body.isRole === sadminRole) {
     // Хэрэв бүртгэлтэй бол
-    const {role, email, phone, username} = req.body
+    const {role, email, phone, username, password} = req.body
+    if (password) {
+        try {
+            const salt = await bcrypt.genSalt(10);
+            req.body.password = await bcrypt.hash(req.body.password, salt);
+        } catch (err) {
+            return res.status(500).json(err);
+        }
+    }
     const userNameExists = await User.findOne({username})
     const userPhoneExists = await User.findOne({phone})
     const userEmailExists = await User.findOne({email})
@@ -196,43 +226,52 @@ const updateUser = asyncHandler(async (req, res) => {
             throw new Error('Имэйл бүртгэлтэй байна')
         }
     }
-    // Хэрэв Role байвал
-    if(!role){
-    const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, {
-        new: true,
-    })
-
-    res.status(200).json(updatedUser)
-    }else {
+    if(!req.body.isRole){
+        if(role){
         res.status (401)
         throw new Error('Role өөрчлөх эрхгүй')
+        }
     }
-
+        try {
+            const updatedUser = await User.findByIdAndUpdate(req.body.id, req.body, {
+            new: true,
+            })
+            res.status(200).json({
+                updatedUser,
+                message: 'Амжилттай шинэчиллээ',
+            })} catch(err) {
+            res.status (401)
+            throw new Error("Хэрэглэгч зөвшөөрөлгүй")
+        }} else {
+        return res.status(403).json("Та зөвхөн өөрийн хаягаа засах боломжтой!");
+    }
 })
 
 // @desc Delete User Data
 // @route DELETE /api/users/:id
 // @access Private
 const deleteUser = asyncHandler(async (req, res) => {
-    const user = await User.findById(req.user.id) 
-
+    const user = await User.findById(req.params.id) 
     // Хэрэглэгч шалгах
     if(!user) {
         res.status(401)
-        throw new Error('Хэрэглэгч олдсонгүй')
+        throw new Error('Хэрэглэгч 1олдсонгүй')
     }
 
-    if(user.id !== user.id) {
-        res.status (401)
-        throw new Error('Хэрэглэгч зөвшөөрөлгүй')
+    if(req.params.id === req.user.id || req.user.role === sadminRole) {
+        try {
+        await user.remove();
+        res.status(200).json({
+            id: req.params.id,
+            message: 'Хаяг амжилттай устгалаа',
+        })
+        } catch(err){
+            res.status (401)
+            throw new Error('Хэрэглэгч зөвшөөрөлгүй')
+        }
+} else {
+        return res.status(403).json({message: "Та зөвхөн өөрийн хаягаа устгах боломжтой!"});
     }
-
-    await user.remove()
-
-    res.status(200).json({ 
-        id: req.user.id,
-        message: 'Хаяг амжилттай устгалаа'
-    })
 })
 // Generate JWT
 const generateToken = (id) => {
@@ -249,4 +288,5 @@ module.exports = {
     getAllUser,
     updateUser,
     deleteUser,
+    setImages,
 }

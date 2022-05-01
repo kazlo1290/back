@@ -6,6 +6,8 @@ const userSchema = mongoose.Schema(
         type: String,
         required: [true,  'Нэвтрэх нэр'],
         unique: true,
+        min: 3,
+        max: 20,
     },
     name: {
         type: String,
@@ -13,25 +15,37 @@ const userSchema = mongoose.Schema(
     },
     email: {
         type: String,
+        max: 50,
         required: [false, 'Имэйл'],   
     },
     phone: {
         type: Number,
         required: [false, 'Утас'],    
     },
-    user_img: {
-        data: Buffer,
-        contentType: String
-    },
     password: {
         type: String,
         required: [true, 'Нууц үг'],
-        length: 8,
+        min: 8,
     },
-    role: { 
-        type: String, 
-        ref: "Role", 
-        required: [true, 'Role']
+    images: {
+        profilePicture: {
+            type: String,
+            trim: true,
+            default: "",
+        },
+        profilePictureName: {
+            type: String,
+            trim: true,
+            default: "",
+        },
+    },
+    followers: {
+      type: Array,
+      default: [],
+    },
+    followings: {
+      type: Array,
+      default: [],
     },
     date: {
         type: String,
