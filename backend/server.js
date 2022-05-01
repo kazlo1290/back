@@ -26,10 +26,10 @@ app.use(express.urlencoded({extended: false}))
 app.use('/users', require('./routes/userRoutes'))
 app.use('/posts', require('./routes/postRoutes'))
 app.use('/api', require('./routes/category.route'));
-// app.use('/backend/uploads', express.static('backend/uploads'));
-// app.use(express.static('./backend'));
-app.use('/uploads/img', express.static('uploads/img'));
-app.use(express.static('./public'));
+app.use('/backend/uploads/img', express.static('backend/uploads/img'));
+app.use(express.static('./backend'));
+// app.use('/uploads/img', express.static('uploads/img'));
+// app.use(express.static('./public'));
 // midllewares
 app.use(morgan('dev'));
 app.use(bodyParser.json());

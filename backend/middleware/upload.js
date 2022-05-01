@@ -4,8 +4,8 @@ const moment = require('moment')
 const localMDY = moment.utc(Date.now()).local().format('YMDHH:MM');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        // cb(null, './backend/uploads/');
-        cb(null, './uploads/img');
+        cb(null, './backend/uploads/img');
+        // cb(null, './uploads/img');
     },
     filename: function (req, file, cb) {
         console.log(file)
