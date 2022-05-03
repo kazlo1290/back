@@ -27,17 +27,15 @@ const userSchema = mongoose.Schema(
         required: [true, 'Нууц үг'],
         min: 8,
     },
-    images: {
-        profilePicture: {
-            type: String,
-            trim: true,
-            default: "",
-        },
-        profilePictureName: {
-            type: String,
-            trim: true,
-            default: "",
-        },
+    profileImg: {
+        type: String,
+        trim: true,
+        default: "",
+    },
+    coverImg: {
+        type: String,
+        trim: true,
+        default: "",
     },
     followers: {
       type: Array,

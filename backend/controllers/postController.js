@@ -15,6 +15,9 @@ const getPosts = asyncHandler(async (req, res) => {
     res.status(200).json(posts)
 })
 
+// @desc Get One Post
+// @router GET /posts/:id
+// 
 // @desc Get Posts
 // @route GET /api/posts/all
 // @access Public

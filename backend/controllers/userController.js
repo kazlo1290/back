@@ -69,31 +69,8 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 })
 
-// @desc Set Images
-// @route POST /users/uploads
-// @access Public
-const setImages = asyncHandler(async (req, res) => {
-    const user = await User.findById(req.user.id) 
-    let name = req.body.name
-    let image = req.file.path
-    console.log(name, image)
-    const newimages = new user({
-        profilePictureName: name,
-        profilePicture: image
-    })
-    newimages.save((err, images) => {
-        if (err) {
-            console.log(err)
-            return res.status(400).json({
-                errors: err.message
-            })
-        }
-        return res.json({
-            message: "Амжилттай үүсгэлээ",
-            images
-        })
-    })
-})
+
+
 
 // @desc Authenticate a User
 // @route POST /api/users/login
@@ -124,6 +101,8 @@ const loginCustomer = asyncHandler(async (req, res) => {
         throw new Error('Нууц үг буруу')
     }
 })
+
+
 
 
 // @desc Authenticate a User
@@ -159,6 +138,10 @@ const loginSAdmin = asyncHandler(async (req, res) => {
         throw new Error('Нууц үг буруу')
     }
 })
+
+
+
+
 // @desc Get User Data
 // @route GET /api/users/me
 // @access Private
@@ -167,6 +150,23 @@ const getMe = asyncHandler(async (req, res) => {
 
     res.status (200).json({user})
 })
+
+// @desc Get Other User Pro
+// @route GET /users/:username
+// @access Public
+const getUserPro = asyncHandler(async (req, res) => {
+    const user = await User.findOne({username:req.params.username})
+
+    if(!user) {
+         res.status(400)
+        throw new Error('Хэрэглэгч олдсонгүй')
+    }
+    res.status(200).json({
+        username: user.username
+    })
+})
+
+
 
 // @desc Get User Data
 // @route GET /api/users/all
@@ -182,6 +182,10 @@ const getAllUser = asyncHandler(async (req, res) => {
         res.status(200).json(alluser)
     }
 })
+
+
+
+
 
 // @desc Update User Data
 // @route PUT /api/users/:id
@@ -247,6 +251,11 @@ const updateUser = asyncHandler(async (req, res) => {
     }
 })
 
+
+
+
+
+
 // @desc Delete User Data
 // @route DELETE /api/users/:id
 // @access Private
@@ -273,12 +282,18 @@ const deleteUser = asyncHandler(async (req, res) => {
         return res.status(403).json({message: "Та зөвхөн өөрийн хаягаа устгах боломжтой!"});
     }
 })
+
+
+
 // Generate JWT
 const generateToken = (id) => {
     return jwt.sign({ id}, process.env.JWT_SECRET, {
         expiresIn: '30d',
     })
 }
+
+
+
 
 module.exports = {
     registerUser,
@@ -288,5 +303,5 @@ module.exports = {
     getAllUser,
     updateUser,
     deleteUser,
-    setImages,
+    getUserPro,
 }
