@@ -7,7 +7,7 @@ const sadminRole = '0'
 // const customerRole = '2'
 
 // @desc Register New User
-// @route POST /api/users
+// @route POST /users
 // @access Public
 const registerUser = asyncHandler(async (req, res) => {
     const { username, name, email, phone, password} = req.body
@@ -40,7 +40,7 @@ const registerUser = asyncHandler(async (req, res) => {
     // Нууц үг Hash
     const salt = await bcrypt.genSalt(10)
     const hashedPassword = await bcrypt.hash(password, salt)
-    // const role = '2'
+
     // Шинэ хэрэглэгч
     const user = await User.create({
         username,
@@ -48,7 +48,6 @@ const registerUser = asyncHandler(async (req, res) => {
         email,
         phone,
         password: hashedPassword,
-        // role,
     })
 
     if(user) {
@@ -65,7 +64,7 @@ const registerUser = asyncHandler(async (req, res) => {
         })
     } else {
         res.status(400)
-        throw new Error('Зөв оруулна уу')
+        throw new Error('Алдаа: Дахин оролдоно уу!')
     }
 })
 
@@ -73,12 +72,16 @@ const registerUser = asyncHandler(async (req, res) => {
 
 
 // @desc Authenticate a User
-// @route POST /api/users/login
+// @route POST /users/login
 // @access Public
 const loginCustomer = asyncHandler(async (req, res) => {
     const {username, password} = req.body
 
-    // email шалгах
+     if(!username || !password) {
+        res.status(400)
+        throw new Error('Алдаа: Мэдээллээ оруулна уу!')
+     }
+    // Хэрэглэгч шалгах
     const user = await User.findOne({username})
 
     if(!user){
@@ -93,7 +96,7 @@ const loginCustomer = asyncHandler(async (req, res) => {
             email: user.email,
             phone: user.phone,
             role: user.role,
-            date: user.date,
+            c_date: user.c_date,
             token: generateToken(user._id),
         })
     } else if(password !== user.password){
@@ -146,24 +149,32 @@ const loginSAdmin = asyncHandler(async (req, res) => {
 // @route GET /api/users/me
 // @access Private
 const getMe = asyncHandler(async (req, res) => {
-    const user = await User.findById(req.user.id) 
+    const me = await User.findById(req.user.id) 
 
-    res.status (200).json({user})
+    res.status (200).json({me})
 })
+
+
+
 
 // @desc Get Other User Pro
 // @route GET /users/:username
 // @access Public
 const getUserPro = asyncHandler(async (req, res) => {
-    const user = await User.findOne({username:req.params.username})
+    const userName = await User.findOne({username:req.params.username})
 
-    if(!user) {
+    if(!userName) {
          res.status(400)
-        throw new Error('Хэрэглэгч олдсонгүй')
+        throw new Error('Алдаа: Хэрэглэгч олдсонгүй')
     }
-    res.status(200).json({
-        username: user.username
-    })
+     res.status(200).json({
+        _id: userName._id,
+        username: userName.username,
+        profileImg: userName.profileImg,
+        coverImg: userName.coverImg,
+        followers: userName.followers,
+        followings: userName.followings,
+     })
 })
 
 
@@ -264,7 +275,7 @@ const deleteUser = asyncHandler(async (req, res) => {
     // Хэрэглэгч шалгах
     if(!user) {
         res.status(401)
-        throw new Error('Хэрэглэгч 1олдсонгүй')
+        throw new Error('Хэрэглэгч олдсонгүй')
     }
 
     if(req.params.id === req.user.id || req.user.role === sadminRole) {
