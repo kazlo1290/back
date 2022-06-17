@@ -30,17 +30,17 @@ app.use('/posts', require('./routes/postRoutes'))
 app.use('/api/songs', require('./routes/song'))
 
 // Serve frontend
-// if (process.env.NODE_ENV === 'production') {
-    // app.use(express.static(path.join(__dirname, '../frontend/build')))
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')))
   
-  //   app.get('*', cors(corsOptions), (req, res, next) =>
-  //     res.sendFile(
-  //       path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
-  //     )
-  //   )
-  // } else {
-  //   app.get('/', cors(corsOptions), (req, res, next) => res.send('production дээр тохируулна уу'))
-  // }
+    app.get('*', cors(corsOptions), (req, res, next) =>
+      res.sendFile(
+        path.resolve(__dirname, '../', 'client', 'build', 'index.html')
+      )
+    )
+  } else {
+    app.get('/', cors(corsOptions), (req, res, next) => res.send('production дээр тохируулна уу'))
+  }
   
 app.use(errorHandler)
 
