@@ -4,8 +4,8 @@
   "description": "Colorfully.mn ADMIN and API",
   "main": "server.js",
   "scripts": {
-    "start": "node TZ=Asia/Ulaanbaatar server/server.js",
-    "server": "nodemon TZ=Asia/Ulaanbaatar server/server.js",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
