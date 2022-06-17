@@ -13,8 +13,12 @@ const app = express()
 app.use(cors());
 
 var corsOptions = {
-  origin: 'https://colorfully.mn',
-  origin: 'http://localhost:4000',
+  origin: [
+    "https://www.colorfully.mn", 
+    "https://colorfully.mn", 
+    "https://*.colorfully.mn",
+    "http://localhost:4000/"
+  ],
   optionsSuccessStatus: 200
 }
 
