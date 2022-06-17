@@ -4,8 +4,8 @@
   "description": "Colorfully.mn ADMIN and API",
   "main": "server.js",
   "scripts": {
-    "start": "node TZ=Asia/Ulaanbaatar server.js",
-    "server": "nodemon TZ=Asia/Ulaanbaatar server.js",
+    "start": "node TZ=Asia/Ulaanbaatar server/server.js",
+    "server": "nodemon TZ=Asia/Ulaanbaatar server/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "concurrently": "^7.2.2",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "react-scripts": "^5.0.1"
   }
 }
