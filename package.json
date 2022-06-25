@@ -4,8 +4,8 @@
   "description": "Colorfully.mn ADMIN and API",
   "main": "server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js",
+    "server": "node server/server.js",
+    "start": "nodemon server/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
