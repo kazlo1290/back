@@ -13,12 +13,7 @@ const app = express()
 app.use(cors());
 
 var corsOptions = {
-  origin: [
-    "https://www.colorfully.mn", 
-    "https://colorfully.mn", 
-    "https://*.colorfully.mn",
-    "http://localhost:4000/"
-  ],
+  origin: ["https://*.colorfully.mn"],
   optionsSuccessStatus: 200
 }
 
@@ -33,13 +28,13 @@ app.use('/api/songs', require('./routes/song'))
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')))
   
-    app.get('*', cors(corsOptions), (req, res, next) =>
+    app.get('*', cors(corsOptions), (req, res) =>
       res.sendFile(
         path.resolve(__dirname, '../', 'client', 'build', 'index.html')
       )
     )
   } else {
-    app.get('/', cors(corsOptions), (req, res, next) => res.send('production дээр тохируулна уу'))
+    app.get('/', cors(corsOptions), (req, res) => res.send('production дээр тохируулна уу'))
   }
   
 app.use(errorHandler)
