@@ -68,13 +68,10 @@ const registerUser = asyncHandler(async (req, res) => {
     }
 })
 
-
-
-
 // @desc Authenticate a User
 // @route POST /users/login
 // @access Public
-const loginCustomer = asyncHandler(async (req, res) => {
+const userLogin = asyncHandler(async (req, res) => {
     const {username, password} = req.body
 
      if(!username || !password) {
@@ -105,46 +102,6 @@ const loginCustomer = asyncHandler(async (req, res) => {
     }
 })
 
-
-
-
-// @desc Authenticate a User
-// @route POST /api/users/admin/login
-// @access Public
-const loginSAdmin = asyncHandler(async (req, res) => {
-    const {email, password} = req.body
-
-    // email шалгах
-    const user = await User.findOne({email})
-
-    if(!user){
-        res.status(400)
-        throw new Error('Хаяг олдсонгүй')
-    }
-    if(sadminRole !== user.role){
-        res.status(400)
-        throw new Error('Нэвтрэх эрхгүй')  
-    }
-    if(user && (await bcrypt.compare(password, user.password))) {
-        res.json({
-            _id: user.id,
-            username: user.username,
-            name: user.name,
-            email: user.email,
-            phone: user.phone,
-            role: user.role,
-            date: user.date,
-            token: generateToken(user._id),
-        })
-    } else if(password !== user.password){
-        res.status(400)
-        throw new Error('Нууц үг буруу')
-    }
-})
-
-
-
-
 // @desc Get User Data
 // @route GET /api/users/me
 // @access Private
@@ -153,9 +110,6 @@ const getMe = asyncHandler(async (req, res) => {
 
     res.status (200).json({me})
 })
-
-
-
 
 // @desc Get Other User Pro
 // @route GET /users/:username
@@ -177,39 +131,33 @@ const getUserPro = asyncHandler(async (req, res) => {
      })
 })
 
-
-
 // @desc Get User Data
 // @route GET /api/users/all
 // @access Private
 const getAllUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user.id) 
-    const alluser = await User.find().sort([['c_date', -1]])
+    const allUser = await User.find().sort([['c_date', -1]])
 
     if(sadminRole !== user.role){
         res.status(400)
         throw new Error('Нэвтрэх эрхгүй')  
     }else {
-        res.status(200).json(alluser)
+        res.status(200).json(allUser)
     }
 })
-
-
-
-
 
 // @desc Update User Data
 // @route PUT /api/users/:id
 // @access Private
 const updateUser = asyncHandler(async (req, res) => {
-    const user = await User.findById(req.body.id)
+    const user = await User.findOne({id:req.params.id})
     // Хэрэглэгч шалгах
     if(!user) {
         res.status(401)
         throw new Error('Хэрэглэгч олдсонгүй')
     }
 
-    if(req.body.id === req.params.id || req.body.isRole === sadminRole) {
+    if(req.body.id === req.params.id || req.user.role === sadminRole) {
     // Хэрэв бүртгэлтэй бол
     const {role, email, phone, username, password} = req.body
     if (password) {
@@ -223,6 +171,7 @@ const updateUser = asyncHandler(async (req, res) => {
     const userNameExists = await User.findOne({username})
     const userPhoneExists = await User.findOne({phone})
     const userEmailExists = await User.findOne({email})
+    const roleDetect = await User.findOne({role})
     if(username){
         if(userNameExists) {
             res.status(400)
@@ -241,7 +190,7 @@ const updateUser = asyncHandler(async (req, res) => {
             throw new Error('Имэйл бүртгэлтэй байна')
         }
     }
-    if(!req.body.isRole){
+    if (roleDetect !== '0') {
         if(role){
         res.status (401)
         throw new Error('Role өөрчлөх эрхгүй')
@@ -257,15 +206,12 @@ const updateUser = asyncHandler(async (req, res) => {
             })} catch(err) {
             res.status (401)
             throw new Error("Хэрэглэгч зөвшөөрөлгүй")
-        }} else {
-        return res.status(403).json("Та зөвхөн өөрийн хаягаа засах боломжтой!");
+        }
+    } else {
+        res.status(403)
+        throw new Error("Та зөвхөн өөрийн хаягаа засах боломжтой!");
     }
 })
-
-
-
-
-
 
 // @desc Delete User Data
 // @route DELETE /api/users/:id
@@ -278,7 +224,7 @@ const deleteUser = asyncHandler(async (req, res) => {
         throw new Error('Хэрэглэгч олдсонгүй')
     }
 
-    if(req.params.id === req.user.id || req.user.role === sadminRole) {
+    if (req.body.id === req.params.id || req.user.role === sadminRole) {
         try {
         await user.remove();
         res.status(200).json({
@@ -289,27 +235,22 @@ const deleteUser = asyncHandler(async (req, res) => {
             res.status (401)
             throw new Error('Хэрэглэгч зөвшөөрөлгүй')
         }
-} else {
-        return res.status(403).json({message: "Та зөвхөн өөрийн хаягаа устгах боломжтой!"});
+    } else {
+        res.status(403)
+        throw new Error ("Та зөвхөн өөрийн хаягаа устгах боломжтой!");
     }
 })
-
-
 
 // Generate JWT
 const generateToken = (id) => {
     return jwt.sign({ id}, process.env.JWT_SECRET, {
-        expiresIn: '30d',
+        expiresIn: '5d',
     })
 }
 
-
-
-
 module.exports = {
     registerUser,
-    loginCustomer,
-    loginSAdmin,
+    userLogin,
     getMe,
     getAllUser,
     updateUser,

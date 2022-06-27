@@ -13,7 +13,10 @@ const app = express()
 app.use(cors());
 
 var corsOptions = {
-  origin: ["https://*.colorfully.mn"],
+  origin: [
+    "https://*.colorfully.mn",
+    "https://colorfully.mn"
+  ],
   optionsSuccessStatus: 200
 }
 
