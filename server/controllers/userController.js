@@ -2,9 +2,7 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
-const sadminRole = '0'
-// const adminRole = '1'
-// const customerRole = '2'
+const userRole = require ('../models/userRole.json')
 
 // @desc Register New User
 // @route POST /users
@@ -59,6 +57,7 @@ const registerUser = asyncHandler(async (req, res) => {
             phone: user.phone,
             role: user.role,
             date: user.date,
+            verify: user.verify,
             c_date: user.c_date,
             token: generateToken(user._id),
         })
@@ -93,6 +92,7 @@ const userLogin = asyncHandler(async (req, res) => {
             email: user.email,
             phone: user.phone,
             role: user.role,
+            theme: user.theme,
             c_date: user.c_date,
             token: generateToken(user._id),
         })
@@ -138,7 +138,7 @@ const getAllUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user.id) 
     const allUser = await User.find().sort([['c_date', -1]])
 
-    if(sadminRole !== user.role){
+    if(userRole.super_admin && userRole.admin !== user.role){
         res.status(400)
         throw new Error('Нэвтрэх эрхгүй')  
     }else {
@@ -157,7 +157,7 @@ const updateUser = asyncHandler(async (req, res) => {
         throw new Error('Хэрэглэгч олдсонгүй')
     }
 
-    if(req.body.id === req.params.id || req.user.role === sadminRole) {
+    if (req.body.id === req.params.id || req.user.role === userRole.super_admin && userRole.admin) {
     // Хэрэв бүртгэлтэй бол
     const {role, email, phone, username, password} = req.body
     if (password) {
@@ -224,7 +224,7 @@ const deleteUser = asyncHandler(async (req, res) => {
         throw new Error('Хэрэглэгч олдсонгүй')
     }
 
-    if (req.body.id === req.params.id || req.user.role === sadminRole) {
+    if (req.body.id === req.params.id || req.user.role === userRole.super_admin && userRole.admin) {
         try {
         await user.remove();
         res.status(200).json({

@@ -37,29 +37,30 @@ const userSchema = mongoose.Schema(
         trim: true,
         default: "",
     },
-    followers: {
-      type: Array,
-      default: [],
-    },
-    followings: {
-      type: Array,
-      default: [],
-    },
     date: {
         type: String,
         default: Date,
         required: true,
     },
+    verify: {
+        type: Boolean,
+        default: "no"
+    },
     role: {
         type: String,
-        enum: ["0", "1", "2"],
-        default: "2"
+        enum: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        default: "9"
+    },
+    theme: {
+        type: String,
+        enum: ["theme", "theme_black"],
+        default: "theme"
     }
 },
     { 
         timestamps: { 
-        createdAt: 'c_date',
-        updatedAt: 'u_date',
+            createdAt: 'c_date',
+            updatedAt: 'u_date',
         }
     }
 )

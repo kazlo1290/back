@@ -1,0 +1,107 @@
+{
+    "client":"Thunder Client",
+    "collectionName":"color",
+    "folderName":"users",
+    "environmentName":"",
+    "collectioId":"ed331d92-15c1-4466-85b0-f55416422ce6",
+    "folderId":"e770672b-2a28-4fc7-b43f-0c1d380e24db",
+    "environmentId":"",
+    "totalFailed":0,
+    "totalPassed":7,
+    "totalRequests":7,
+    "dateExported":"2022-06-30T08:24:12.987Z",
+    "requests":
+    [
+        {
+            "reqId":"e91cf000-f5cc-4f8e-8efe-c3375e141195",
+            "name":"login",
+            "method":"POST",
+            "url":"http://localhost:3000/users/login",
+            "resCode":200,
+            "resTime":596,
+            "resTimeText":"596 ms",
+            "resSize":297,
+            "passed":0,
+            "total":0,
+            "tests":[]
+        },
+        {
+            "reqId":"d33a52b0-a48a-4a98-9c5e-eadcc7029d04",
+            "name":"get",
+            "method":"GET",
+            "url":"http://localhost:3000/users/me",
+            "resCode":200,
+            "resTime":1614,
+            "resTimeText":"1.61 s",
+            "resSize":397,
+            "passed":0,
+            "total":0,
+            "tests":[]
+        },
+        {
+            "reqId":"79a08f59-0c28-414c-a4cc-7522c97af878",
+            "name":"register",
+            "method":"POST",
+            "url":"http://localhost:3000/users",
+            "resCode":400,
+            "resTime":1926,
+            "resTimeText":"1.93 s",
+            "resSize":80,
+            "passed":0,
+            "total":0,
+            "tests":[]
+        },
+        {
+            "reqId":"e42b22dc-7c20-45cd-9d0b-d092ecc451b5",
+            "name":"get all users",
+            "method":"GET",
+            "url":"http://localhost:3000/users/all",
+            "resCode":400,
+            "resTime":1824,
+            "resTimeText":"1.82 s",
+            "resSize":54,
+            "passed":0,
+            "total":0,
+            "tests":[]
+        },
+        {
+            "reqId":"cdc856cc-da05-4ddb-86bf-afdff80d032e",
+            "name":"update",
+            "method":"PUT",
+            "url":"http://localhost:3000/users/settings/62b856e386733c61bdaa3422",
+            "resCode":200,
+            "resTime":2858,
+            "resTimeText":"2.86 s",
+            "resSize":72,
+            "passed":0,
+            "total":0,
+            "tests":[]
+        },
+        {
+            "reqId":"e3140328-31a5-4516-b432-a7013c236841",
+            "name":"delete",
+            "method":"DELETE",
+            "url":"http://localhost:3000/users/settings/62b84c5e0a79ff729da2f2f0",
+            "resCode":401,
+            "resTime":402,
+            "resTimeText":"402 ms",
+            "resSize":64,
+            "passed":0,
+            "total":0,
+            "tests":[]
+        },
+        {
+            "reqId":"5998350e-8c3f-4750-bf27-e8ab2ee489a8",
+            "name":"get user profile",
+            "method":"GET",
+            "url":"http://localhost:3000/users/kazlo",
+            "resCode":200,
+            "resTime":104,
+            "resTimeText":"104 ms",
+            "resSize":114,
+            "passed":0,
+            "total":0,
+            "tests":[]
+        }
+    ]
+}
