@@ -32,11 +32,6 @@ const userSchema = mongoose.Schema(
         trim: true,
         default: "",
     },
-    coverImg: {
-        type: String,
-        trim: true,
-        default: "",
-    },
     date: {
         type: String,
         default: Date,
@@ -45,6 +40,10 @@ const userSchema = mongoose.Schema(
     verify: {
         type: Boolean,
         default: "no"
+    },
+    organization: {
+        type: String,
+        default: "0"
     },
     role: {
         type: String,

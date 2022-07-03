@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
-const userRole = require ('../models/userRole.json')
+const userRole = require ('../json/userRole.json')
 
 // @desc Register New User
 // @route POST /users
@@ -55,9 +55,12 @@ const registerUser = asyncHandler(async (req, res) => {
             name: user.name,
             email: user.email,
             phone: user.phone,
-            role: user.role,
+            profileImg: user.profileImg,
             date: user.date,
             verify: user.verify,
+            organization: user.organization,
+            role: user.role,
+            theme: user.theme,
             c_date: user.c_date,
             token: generateToken(user._id),
         })
