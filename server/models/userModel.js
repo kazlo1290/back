@@ -52,7 +52,7 @@ const userSchema = mongoose.Schema(
     },
     theme: {
         type: String,
-        enum: ["theme", "theme_black"],
+        enum: ["theme", "theme_black", "theme_blue"],
         default: "theme"
     }
 },

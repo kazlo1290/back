@@ -2,7 +2,8 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
-const userRole = require ('../json/userRole.json')
+const Sitedata = require('../json/userRole.json')
+const userRole = Sitedata.role
 
 // @desc Register New User
 // @route POST /users
