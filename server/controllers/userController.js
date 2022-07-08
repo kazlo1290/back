@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
 const Sitedata = require('../json/Sitedata.json')
-const userRole = Sitedata.role
+const userRole = Sitedata.role;
 
 // @desc Register New User
 // @route POST /users
