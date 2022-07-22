@@ -4,9 +4,9 @@ const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI)
 
-        console.log(`MongoDB холбогдлоо: ${conn.connection.host}`.yellow.underline);
+        console.log('MongoDbOK: '.bgRed,`${conn.connection.host}`.yellow.underline);
     } catch (error) {
-        console.log(error)
+        console.log('MongoDbER: '.bgRed, err.toString().red, ' RETRYING...'.blue);
          process.exit(1)
     }
 }
