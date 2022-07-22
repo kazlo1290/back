@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Simple Host | Cloud.mn</title> 
+        <link rel="icon" type="image/png" sizes="80x80" href="https://cloud.mn/img/favicon.png"> 
+        <meta title="cloud.mn"> 
+        <meta name="theme-color" content="#1976d2"> 
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+        <meta charset="UTF-8"> 
+        <meta name="geo.placename" content="Ulaanbaatar"> 
+        <meta name="geo.region" content="MN"> 
+        <meta name="author" content="CloudMN"> 
+        <meta name="viewport" content="width=device-width"> 
+        <meta charset="utf-8"> 
+        <meta name="robots" content="index,follow"> 
+        <meta name="googlebot" content="index,follow"> 
+        <meta name="description" content="Аж ахуйн нэгж, гарааны бизнес болон технологийн салбарынхан Үндэсний клауд-д нэгдэж байна. Бид танд технологийн дэд бүтэц болон бизнесээ хурдасгах боломжийг олгоно."> 
+        <meta property="og:title" content="Cloud.mn - Үндэсний клауд"> 
+        <meta property="og:description" content="Аж ахуйн нэгж, гарааны бизнес болон технологийн салбарынхан Үндэсний клауд-д нэгдэж байна. Бид танд технологийн дэд бүтэц болон бизнесээ хурдасгах боломжийг олгоно."> 
+        <meta property="og:image" content="https://cloudmn-landingpage.vercel.app/metatag/index-tag-image.png"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"> 
+        <style>
+        :root{
+            --primary-color: #252d51; 
+            --secondary-color: #FAFAFA
+            }
+            body{
+                background-color: var(--secondary-color); 
+                font-family: 'JetBrains Mono', monospace; 
+                font-size: 14px; 
+                line-height: 1.42857143; 
+                color: var(--primary-color); 
+                margin: 0; 
+                width: 100vw; 
+                height: 100vh; 
+                background-image: url('background.png'); 
+                background-size: contain; 
+                background-position: bottom; 
+                background-repeat: no-repeat;
+            }
+            .container{
+                padding: 2rem; 
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center; 
+                align-items: 
+                center;
+            }
+            .icon>svg{
+                width: 10rem; 
+                height: 10rem; 
+                fill: var(--primary-color)
+            }
+            .title{
+                font-size: 2rem; 
+                font-weight: 300; 
+                margin-bottom: 1rem; 
+                text-align: center
+            }
+            .btn-wrapper{
+                display: flex; 
+                flex-flow: row wrap; 
+                justify-content: center; 
+                align-items: center; 
+                gap: 1rem; 
+                width: 100%
+            }
+            .btn{
+                align-items: center;
+                appearance: none; 
+                background-color: var(--secondary-color); 
+                border-radius: 4px; 
+                border-width: 0; 
+                box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset; 
+                box-sizing: border-box; 
+                color: var(--primary-color); 
+                cursor: pointer; 
+                display: inline-flex; 
+                font-family: "JetBrains Mono", monospace; 
+                height: 48px; 
+                justify-content: center; 
+                line-height: 1; 
+                list-style: none; 
+                overflow: hidden; 
+                padding-left: 16px; 
+                padding-right: 16px; 
+                position: relative; 
+                text-align: left; 
+                text-decoration: none; 
+                transition: box-shadow .15s, transform .15s; 
+                user-select: none; 
+                -webkit-user-select: none; 
+                touch-action: manipulation; 
+                white-space: nowrap; 
+                will-change: box-shadow, transform; 
+                font-size: 18px;
+            }
+            .btn:focus{
+                box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            }
+            .btn:hover{
+                box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset; 
+                transform: translateY(-2px);
+            }
+            .btn:active{
+                box-shadow: #D6D6E7 0 3px 7px inset; 
+                transform: translateY(2px);
+            }
+        </style>
+    </head>
+    <body> 
+        <div class="container"> 
+            <div class="icon"> 
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="280 170 560 560" preserveAspectRatio="xMidYMid meet"> 
+                    <g transform="translate(0,1080) scale(0.1,-0.1)" stroke="none"> 
+                        <path d="M5325 8839 c-592 -71 -1125 -334 -1540 -760 -375 -385 -598 -826 -696 -1374 -21 -116 -24 -161 -24 -410 0 -249 3 -294 24 -410 101 -569 343 -1031 742 -1420 394 -384 844 -609 1404 -702 157 -26 602 -26 760 0 580 96 1055 341 1455 753 103 106 290 334 290 354 0 3 -30 16 -67 29 -199 69 -375 183 -543 351 -219 219 -347 452 -412 753 -32 147 -32 437 0 584 42 195 119 377 230 543 72 107 231 273 342 356 92 69 301 181 393 210 31 10 57 20 57 24 0 20 -185 246 -290 354 -393 403 -855 646 -1425 747 -96 17 -169 22 -370 25 -137 1 -286 -2 -330 -7z m435 -1584 c371 -56 671 -314 784 -674 160 -507 -129 -1053 -643 -1215 -278 -88 -586 -41 -836 127 -77 52 -200 175 -252 252 -132 196 -191 432 -164 656 27 228 120 419 280 580 150 149 330 242 531 274 114 18 186 18 300 0z m-1610 -505 c220 -35 390 -233 390 -455 0 -278 -259 -501 -529 -455 -274 46 -445 308 -375 575 41 161 181 294 347 330 78 17 87 17 167 5z"/> 
+                    </g> 
+                </svg> 
+            </div>
+            <h1 class="title">WELCOME TO SIMPLE HOST</h1> 
+            <div class="btn-wrapper"> 
+                <a href="/filemanager" target="_blank" rel="noopener noreferrer" class="btn">filemanager</a> 
+                <a href="/phpmyadmin" target="_blank" rel="noopener noreferrer" class="btn">phpMyAdmin</a> 
+            </div>
+        </div>
+    </body>
+</html>

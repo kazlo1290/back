@@ -1,11 +1,11 @@
 {
-  "name": "admin.colorfully.mn",
+  "name": "apicolor",
   "version": "0.1.0",
-  "description": "Colorfully.mn ADMIN and API",
-  "main": "server.js",
+  "description": "nodejs phpmyadmin mariadb",
+  "main": "server_mon.js",
   "scripts": {
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js",
+    "start": "node server/server_mon.js",
+    "server": "nodemon server/server_mon.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
@@ -13,19 +13,22 @@
   "author": "kazlo",
   "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.19",
     "moment": "^2.29.4",
-    "mongoose": "^6.4.3",
+    "mongoose": "^6.4.6",
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "concurrently": "^7.2.2",
+    "concurrently": "^7.3.0",
     "nodemon": "^2.0.19",
     "react-scripts": "^5.0.1"
   }
