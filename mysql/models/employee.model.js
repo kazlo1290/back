@@ -1,4 +1,4 @@
-var dbConn = require('../config/db_mysql');
+var dbConn = require('../../config/db');
 var query = require('mysql')
 
 class Employee {

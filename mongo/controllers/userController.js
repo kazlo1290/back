@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const asyncHandler =  require('express-async-handler')
 const User = require('../models/userModel')
-const Sitedata = require('../json/Sitedata.json')
+const Sitedata = require('../../json/Sitedata.json')
 const userRole = Sitedata.role;
 
 // @desc Register New User

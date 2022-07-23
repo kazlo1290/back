@@ -9,7 +9,7 @@ const {
     deleteUser,
     getUserPro,
 } = require('../controllers/userController')
-const {protect} = require('../middleware/authMiddleware')
+const {protect} = require('../../middleware/authMiddleware')
 
 router.post('/', registerUser)
 router.route('/login').post(userLogin)
