@@ -1,4 +1,3 @@
-
 const EmployeeModel = require('../models/employee.model');
 const asyncHandler = require('express-async-handler')
 

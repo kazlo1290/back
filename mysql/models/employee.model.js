@@ -1,5 +1,5 @@
-var dbConn = require('../../config/db');
-var query = require('mysql')
+var connectMysql = require('../../config/db');
+// var query = require('mysql')
 
 class Employee {
     constructor(employee) {
@@ -16,7 +16,7 @@ class Employee {
     }
     // get all employees
     static getAllEmployees(result) {
-        dbConn.query('SELECT * FROM employees WHERE is_deleted=0', (err, res) => {
+        connectMysql.query('SELECT * FROM employees WHERE is_deleted=0', (err, res) => {
             if (err) {
                 console.log('Error while fetching employess', err);
                 result(null, err);
@@ -28,7 +28,7 @@ class Employee {
     }
     // get employee by ID from DB
     static getEmployeeByID(id, result) {
-        dbConn.query('SELECT * FROM employees WHERE id=?', id, (err, res) => {
+        connectMysql.query('SELECT * FROM employees WHERE id=?', id, (err, res) => {
             if (err) {
                 console.log('Error while fetching employee by id', err);
                 result(null, err);
@@ -39,7 +39,7 @@ class Employee {
     }
     // create new employee
     static createEmployee(employeeReqData, result) {
-        dbConn.query('INSERT INTO employees SET ? ', employeeReqData, (err, res) => {
+        connectMysql.query('INSERT INTO employees SET ? ', employeeReqData, (err, res) => {
             if (err) {
                 console.log('Error while inserting data');
                 result(null, err);
@@ -51,8 +51,8 @@ class Employee {
     }
     // update employee
     static updateEmployee(id, employeeReqData, result) {
-        dbConn.query("UPDATE employees SET first_name=? || last_name=?,email=?,phone=?,organization=?,designation=?,salary=? WHERE id = ?", [employeeReqData.first_name, employeeReqData.last_name, employeeReqData.email, employeeReqData.phone, employeeReqData.organization, employeeReqData.designation, employeeReqData.salary, id], (err, res) => {
-        // dbConn.query("UPDATE employees SET first_name=?,last_name=?,email=?,phone=?,organization=?,designation=?,salary=? WHERE id = ?", [employeeReqData.first_name, employeeReqData.last_name, employeeReqData.email, employeeReqData.phone, employeeReqData.organization, employeeReqData.designation, employeeReqData.salary, id], (err, res) => {
+        connectMysql.query("UPDATE employees SET first_name=? || last_name=?,email=?,phone=?,organization=?,designation=?,salary=? WHERE id = ?", [employeeReqData.first_name, employeeReqData.last_name, employeeReqData.email, employeeReqData.phone, employeeReqData.organization, employeeReqData.designation, employeeReqData.salary, id], (err, res) => {
+        // connectMysql.query("UPDATE employees SET first_name=?,last_name=?,email=?,phone=?,organization=?,designation=?,salary=? WHERE id = ?", [employeeReqData.first_name, employeeReqData.last_name, employeeReqData.email, employeeReqData.phone, employeeReqData.organization, employeeReqData.designation, employeeReqData.salary, id], (err, res) => {
             if (err) {
                 console.log('Error while updating the employee');
                 result(null, err);
@@ -64,7 +64,7 @@ class Employee {
     }
     // delete employee
     static deleteEmployee(id, result) {
-        // dbConn.query('DELETE FROM employees WHERE id=?', [id], (err, res)=>{
+        // connectMysql.query('DELETE FROM employees WHERE id=?', [id], (err, res)=>{
         //     if(err){
         //         console.log('Error while deleting the employee');
         //         result(null, err);
@@ -72,7 +72,7 @@ class Employee {
         //         result(null, res);
         //     }
         // })
-        dbConn.query("UPDATE employees SET is_deleted=? WHERE id = ?", [1, id], (err, res) => {
+        connectMysql.query("UPDATE employees SET is_deleted=? WHERE id = ?", [1, id], (err, res) => {
             if (err) {
                 console.log('Error while deleting the employee');
                 result(null, err);

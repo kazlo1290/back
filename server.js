@@ -8,7 +8,7 @@ const port = process.env.PORT || 4000;
 
 function FrontendCall() {
 
-    // Serve frontend
+    // Check Production
     if (process.env.NODE_ENV === 'production') {
         app.use(express.static(path.join(__dirname, './client/build')))
 
@@ -18,15 +18,18 @@ function FrontendCall() {
             )
         )
     } else {
-        app.get('/', cors(corsOptions), (req, res) => res.send('production дээр тохируулна уу'));
+        app.get('/', cors(corsOptions), (_req, res) => res.send('set to production'));
     }
 
     app.use(errorHandler);
     
 }
 
+// Use
 const app = express();
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 var corsOptions = {
     origin: [
@@ -36,15 +39,12 @@ var corsOptions = {
     optionsSuccessStatus: 200
 };
 
-// Use
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
 
-// Database Choose
+// MongoDB
 if (process.env.DB_CHOOSE == 'MONGODB') {
 
-    const connectDB = require('./config/db.js')
-    connectDB();
+    const connectMongo = require('./config/db.js')
+    connectMongo();
 
     // Routes
     app.use('/users', cors(corsOptions), require('./mongo/routes/userRoutes'));
@@ -55,20 +55,22 @@ if (process.env.DB_CHOOSE == 'MONGODB') {
     FrontendCall();
 
     // listen port
-    app.listen(port, () => console.log(`Port: `.bgRed + `${port.yellow.underline}`))
-} else 
-if (process.env.DB_CHOOSE == 'MYSQL') {
+    app.listen(port, () => console.log(`Port: `.bgRed + `${port.yellow}`))
+} 
+// MysqlDB
+else if (process.env.DB_CHOOSE == 'MYSQL') {
 
-    console.log("Host: ".bgRed + process.env.DB_HOST.yellow.underline)
-    console.log("User: ".bgRed + process.env.DB_USERNAME.yellow.underline)
+    console.log("Host: ".bgRed + process.env.DB_HOST.yellow)
+    console.log("User: ".bgRed + process.env.DB_USERNAME.yellow)
     
     // Routes
     app.use('/api/v1/employee', cors(corsOptions), require('./mysql/routes/employee.route'))
-
+    app.use('/api/v1/user', cors(corsOptions), require('./mysql/routes/user.route'))
+    
     // Serve frontend
     FrontendCall();
 
     // listen port
-    app.listen(port, () => console.log(`Port: `.bgRed + `${port.yellow.underline}`))
+    app.listen(port, () => console.log(`Port: `.bgRed + `${port.yellow}`))
 
 };

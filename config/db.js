@@ -1,23 +1,28 @@
 const mongoose = require('mongoose');
 const mysql = require('mysql');
+// const Data = require('../mysql/query');
 
+// MongoDB
 if (process.env.DB_CHOOSE == 'MONGODB') {
-    const connectDB = async () => {
+    const connectMongo = async () => {
         try {
             const conn = await mongoose.connect(process.env.MONGO_URI)
 
-            console.log('MongoDbOK: '.bgRed, `${conn.connection.host}`.yellow.underline);
+            console.log('MongoDbOK: '.bgRed, `${conn.connection.host}`.yellow);
         } catch (err) {
             console.log('MongoDbER: '.bgRed, err.toString().red, ' RETRYING...'.blue);
             process.exit(1)
         }
     }
 
-    module.exports = connectDB;
+    module.exports = connectMongo;
 
-} else 
-if (process.env.DB_CHOOSE == 'MYSQL') {
-    const dbConn = mysql.createPool({
+} 
+
+// MysqlDB
+else if (process.env.DB_CHOOSE == 'MYSQL') {
+    // Connection Data
+    const connectMysql = mysql.createPool({
         connectionLimit: 10,
         waitForConnections: true,
         host: process.env.DB_HOST,
@@ -27,13 +32,25 @@ if (process.env.DB_CHOOSE == 'MYSQL') {
         debug: false,
     })
 
-    dbConn.getConnection(function (err) {
+    // Connect
+    connectMysql.getConnection(function (err) {
         if (err) {
             console.log('MysqlDbER: '.bgRed, err.toString().red, ' RETRYING...'.blue);
-        } else {
-            console.log('MysqlDbOK: '.bgRed + `${process.env.DB_NAME}`.yellow.underline);
+        } 
+        else {
+            // // Create Tables
+            // connectMysql.query(DataInsert, Data, function (err, result) {
+            //     if(err){
+            //         console.log('Query: '.bgRed + 'not working'.yellow);
+            //         console.log('Error: '.bgRed + err);
+            //     } else {
+            //         console.log('Query: '.bgRed + 'worked'.yellow);
+            //         console.log('Result: '.bgRed + JSON.stringify(result).yellow);
+            //     }
+            // })
+        console.log('MysqlDbOK: '.bgRed + `${process.env.DB_NAME}`.yellow);
         }
     })
 
-    module.exports = dbConn;
+    module.exports = connectMysql;
 }
