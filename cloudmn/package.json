@@ -1,6 +1,0 @@
-{
-  "scripts": {
-    "start": "node index.js",
-    "server": "nodemon server/index.js"
-  }
-}

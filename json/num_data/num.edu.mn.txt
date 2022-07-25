@@ -1,0 +1,4 @@
+https://sisi.num.edu.mn/digital_num/api/package/uruunii-medeelel
+https://sisi.num.edu.mn/digital_num/api/package/hicheeliin-huvaari
+https://sisi.num.edu.mn/digital_num/api/package/baiguullagiin-butets
+https://sisi.num.edu.mn/digital_num/api/package/course

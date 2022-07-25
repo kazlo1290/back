@@ -2,11 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 const {
-    putCreateTable,
+    getCreateTable,
+    postCreateUser
 } = require('../controllers/user.controller');
-// const {protect} = require('../middleware/authMiddleware')
+// const protect = require('../../middleware/authMiddleware')
 
 // get all employees
-router.get('/table', putCreateTable);
+router.get('/table', getCreateTable);
+router.post('/', postCreateUser);
 
 module.exports = router;

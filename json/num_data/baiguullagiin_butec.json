@@ -1,0 +1,883 @@
+[{
+        "buttsiin_negjiin_dugaar": "ed7bd5bccea3317f7fc60813a25363a2",
+        "buttsiin_negjiin_ner": "Монгол Улсын Их Сургууль",
+        "buttsiin_negjiin_tovchlol": "БСШУЯ, МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "8155bc545f84d9652f1012ef2bdfb6eb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Боловсрол Соёл Шинжлэх Ухааны Яам"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_negjiin_ner": "Захиргааны нэгжүүд",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зн",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "ed7bd5bccea3317f7fc60813a25363a2",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Монгол Улсын Их Сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "ed7bd5bccea3317f7fc60813a25363a2",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Монгол Улсын Их Сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_negjiin_ner": "Бие даасан нэгжүүд",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "ed7bd5bccea3317f7fc60813a25363a2",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Монгол Улсын Их Сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "4afd55157555bbff4c861e344b2af98f",
+        "buttsiin_negjiin_ner": "Багшийн хөгжил, цахим сургалтын төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, БХЦСТ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "d3bce4526190b62e0e924b3bd3f9158b",
+        "buttsiin_negjiin_ner": "Оюутан, төгсөгчийн хэлтэс",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Отх",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "488fdb9c4b692880cd626a8ec344baaf",
+        "buttsiin_negjiin_ner": "Номын сан",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Нс",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "c256a60843536bed8c2a1177cc34df02",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "517a80f2a4cc4fcd95213b5fb0a7f445",
+        "buttsiin_negjiin_ner": "Элсэлт, бүртгэлийн хэлтэс",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ЭБХ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "a376b647a995a568aed80e545765deed",
+        "buttsiin_negjiin_ner": "Хамтын ажиллагааны хэлтэс",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХАХ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "9b65b75fb4864747ea7a3671cacb53e0",
+        "buttsiin_negjiin_ner": "Хангамж үйлчилгээний газар",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "05f3df6133eabca4591fe876108fd197",
+        "buttsiin_negjiin_ner": "Санхүү, төлөвлөлтийн газар",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, СТГ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "d2cd9d0de87b7f1bbf6ad6a92119bdc2",
+        "buttsiin_negjiin_ner": "Эрдэм шинжилгээний хэлтэс",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Эшх",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "7ccbf88161aca2fe74a10376ba813e2e",
+        "buttsiin_negjiin_ner": "Мэдээллийн технологийн газар",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зн, Мтг",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2b51359de22d00460ec822ceb5454d47",
+        "buttsiin_negjiin_ner": "Захиргаа, хүний нөөцийн газар",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ЗХНГ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "efd8bd64f19923ff9abab41952a73986",
+        "buttsiin_negjiin_ner": "Хяналт-Шинжилгээ, үнэлгээний алба",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХШҮА",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "6ae2ee9b3172446a71797b7869c940c9",
+        "buttsiin_negjiin_ner": "Хөтөлбөр, чанарын баталгаажуулалтын хэлтэс",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХЧБХ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "0c9e5807991edb0e24dad3c859a06f3a",
+        "buttsiin_negjiin_ner": "Инноваци, технологи дамжуулах төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ЭТДТ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "57b9cdfbafb42a79ef2c2afa8875bb9f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Захиргааны нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "0307e935b88c9d28e8bb22ef356cc4aa",
+        "buttsiin_negjiin_ner": "Ахисан түвшний сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, Атс",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "c6322879a58545e2ac1e26ea18e2db71",
+        "buttsiin_negjiin_ner": "Хууль зүйн сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, ХЗС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "25f2cc0603042191aff533208b8239fc",
+        "buttsiin_negjiin_ner": "Бизнесийн сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, БС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "427dedd32421e1a1df8119797a7737f9",
+        "buttsiin_negjiin_ner": "Олон улсын харилцаа, нийтийн удирдлагын сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, ОУХНУС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_negjiin_ner": "Эрдэнэт сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "b43d3f04841fc58b6e155df37be8b3f0",
+        "buttsiin_negjiin_ner": "Шинжлэх ухааны сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, ШУС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2ec6cfb3aa8d211a2d1078dfbba96553",
+        "buttsiin_negjiin_ner": "Хэрэглээний шинжлэх ухаан, инженерчлэлийн сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, ХШУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_negjiin_ner": "Завхан сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "47ed62016b66cca6f6aae9f5b162738b",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бүрэлдэхүүн/Салбар сургуулиуд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "8dcac6247f68cd6f2e4be5dc39c49ea5",
+        "buttsiin_negjiin_ner": "МУИС-Хэвлэх үйлдвэр",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Хү",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "e55c4dcd2516f872ee58f0bce9d0eb16",
+        "buttsiin_negjiin_ner": "Тогтвортой хөгжлийн хүрээлэн ",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Тхх",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "e5b6078af7408e0342ae4f133b911f2e",
+        "buttsiin_negjiin_ner": "Генийн инженерчлэлийн лаборатори ",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Гил",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "4229bc3f9323ce05542078d7405e488a",
+        "buttsiin_negjiin_ner": "Монгол-Японы хүний нөөцийн хөгжлийн төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Мхнхт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "246552371e1288f4705f0b6be8ddb883",
+        "buttsiin_negjiin_ner": "МУИС-Хэвлэлийн газар",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, МП",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2001dd5d7506576d9133aec8a3c21210",
+        "buttsiin_negjiin_ner": "Байгаль-Эх лицей ахлах сургууль",
+        "buttsiin_negjiin_tovchlol": "МУИС, БЛАС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2dc6084b27f000147ee8b0025de5e48e",
+        "buttsiin_negjiin_ner": "Нийгмийн судалгааны хүрээлэн",
+        "buttsiin_negjiin_tovchlol": "МУИС, Нсх",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "60780385a2a39fc032c1481afcc67b23",
+        "buttsiin_negjiin_ner": "Монгол судлалын хүрээлэн",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Мсх",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "99f6b092bcf56de37350128d2da296e2",
+        "buttsiin_negjiin_ner": "Күнзийн институт",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, КИ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "a0efde395be206dd4baab9bec39c7701",
+        "buttsiin_negjiin_ner": "Хөгжлийн судалгааны төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, Хст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "dd14ae50a199d964fe37895d898c5316",
+        "buttsiin_negjiin_ner": "Цөмийн физикийн судалгааны төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, ЦФСТ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "d73e92cf7657493a58a414d5d1516696",
+        "buttsiin_negjiin_ner": "Өвөр зайсан сургалт судалгааны төв",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "669f6183a25595a65e5a0c6bdffb3cc9",
+        "buttsiin_negjiin_ner": "Эмнэлэг",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2e053b56c0f699612f905dcbb7c4de23",
+        "buttsiin_negjiin_ner": "Хот, бүс нутгийн хөгжлийн судалгааны хүрээлэн",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хбнхсх",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "5717f0397312ff56218ab7279a112508",
+        "buttsiin_negjiin_ner": "Эдийн засгийн хүрээлэн",
+        "buttsiin_negjiin_tovchlol": "МУИС, ЭЗХ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "79303e58370c370402d4c4e1e66f7a72",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бие даасан нэгжүүд"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "46e81d2429cf126420b04c9672b3bfe7",
+        "buttsiin_negjiin_ner": "Нийтийн эрх зүйн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, ХЗС, Нэзт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "c6322879a58545e2ac1e26ea18e2db71",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хууль зүйн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "e66e7a5bd164ab536c094e8aef839e87",
+        "buttsiin_negjiin_ner": "Хувийн эрх зүйн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, ХЗС, Хэзт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "c6322879a58545e2ac1e26ea18e2db71",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хууль зүйн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "b2be68e109ad31d63bf78cfcf8c097c5",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хзс, З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "c6322879a58545e2ac1e26ea18e2db71",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хууль зүйн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "445412c6c6f428cbd48be282d3baf1b2",
+        "buttsiin_negjiin_ner": "Практик сургалтын төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, ХЗС, Пст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "c6322879a58545e2ac1e26ea18e2db71",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хууль зүйн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "936eb0acbf0e7fabd463ea112521923e",
+        "buttsiin_negjiin_ner": "Японы эрх зүйн боловсролын төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, ХЗС, Яэзбт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "c6322879a58545e2ac1e26ea18e2db71",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хууль зүйн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "390888088dba202740d2afaf69425415",
+        "buttsiin_negjiin_ner": "Солонгосын эрх зүйн боловсрол төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, ХЗС, Сэзбт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "c6322879a58545e2ac1e26ea18e2db71",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хууль зүйн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "65fe2b84915b35572e92c2b870a8a48d",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Бс, З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "25f2cc0603042191aff533208b8239fc",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бизнесийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "ed1f0795c22f0e18ac0028e84c22e619",
+        "buttsiin_negjiin_ner": "Менежментийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Бс, Мт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "25f2cc0603042191aff533208b8239fc",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бизнесийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "79761657d463bf02070d46a621733175",
+        "buttsiin_negjiin_ner": "Нягтлан бодох бүртгэлийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Бс, Нббт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "25f2cc0603042191aff533208b8239fc",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бизнесийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "6a45ab43e5e6ec2545c87f08c71cf8b3",
+        "buttsiin_negjiin_ner": "Санхүүгийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Бс, Ст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "25f2cc0603042191aff533208b8239fc",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бизнесийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "692bdebe0c47cb57db00458e00bd1fab",
+        "buttsiin_negjiin_ner": "Маркетинг худалдааны тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Бс, Мхт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "25f2cc0603042191aff533208b8239fc",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бизнесийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "92215e499a81b2264c5431d6b42b78e0",
+        "buttsiin_negjiin_ner": "Бизнес консалтинг төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, БС,БКТ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "25f2cc0603042191aff533208b8239fc",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Бизнесийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "1f5b333025c2de2f2bb07e32d72c99d7",
+        "buttsiin_negjiin_ner": "Нийтийн удирдлагын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Оухнус, Нут",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "427dedd32421e1a1df8119797a7737f9",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Олон улсын харилцаа, нийтийн удирдлагын сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "53a7f93f1e3d16774700ca4969294061",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Оухнус, З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "427dedd32421e1a1df8119797a7737f9",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Олон улсын харилцаа, нийтийн удирдлагын сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "c14959c12a08735b114272e227117457",
+        "buttsiin_negjiin_ner": "Олон улсын харилцааны тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Оухнус, Оухт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "427dedd32421e1a1df8119797a7737f9",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Олон улсын харилцаа, нийтийн удирдлагын сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "36662cd7a386db318fe61e1f8489ddbb",
+        "buttsiin_negjiin_ner": "Биеийн тамирын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, БСА, Бтт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "517a80f2a4cc4fcd95213b5fb0a7f445",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Элсэлт, бүртгэлийн хэлтэс"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_negjiin_ner": "Үйлчилгээний нэгж",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ, ҮН",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "9b65b75fb4864747ea7a3671cacb53e0",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хангамж үйлчилгээний газар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2ac4d10aeb843c622abc18b01a344932",
+        "buttsiin_negjiin_ner": "Эрдэм шинжилгээ, инновацийн алба",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, ЭшИ Хаа",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "17e98e353bf4295caec9e866c8268cc6",
+        "buttsiin_negjiin_ner": "Хүмүүнлэгийн ухааны тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, Хут",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "ad7fa415d4310180bba0a88fd346e16e",
+        "buttsiin_negjiin_ner": "Бизнесийн ухааны тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, БУт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "5da4866fe474f5e61a5b23920cd34228",
+        "buttsiin_negjiin_ner": "Гадаад хэлний тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, Гхт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "e1440d44a2feb794a6866502434290a1",
+        "buttsiin_negjiin_ner": "Санхүү, эдийн засгийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, СЭзт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "f1c4832798c6622b2f9c0235822b8404",
+        "buttsiin_negjiin_ner": "Нягтлан бодох бүртгэлийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, Нббт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "c091b841c42452b576227b2b6aeb9074",
+        "buttsiin_negjiin_ner": "Сургалт, оюутны алба",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, СОа",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "b114e3cadc3721c1de38a1d15600e7ae",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "56489090594b57d0d5c2354304631caf",
+        "buttsiin_negjiin_ner": "Санхүү, хангамж үйлчилгээний алба",
+        "buttsiin_negjiin_tovchlol": "МУИС, Эс, СХүа",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "d1e4872d64cf45f398d7a40fa0346d51",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Эрдэнэт сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "1a7cb5973052155513655e24e84dd1d0",
+        "buttsiin_negjiin_ner": "Санхүү, эдийн засгийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс, Сбт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Завхан сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "d2e46888e9f80ffbb903e99462288451",
+        "buttsiin_negjiin_ner": "Ерөнхий эрдмийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс, Еэт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Завхан сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2fd7fbc9cabb3376b2643a5241caeddc",
+        "buttsiin_negjiin_ner": "Эрдэм шинжилгээ, инновацийн алба",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс, Ст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Завхан сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "dd632ba56ba70d11b2d568863fa68163",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс, Зсаа",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Завхан сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "671dee26f3e66a06a43ca8f9adef35ba",
+        "buttsiin_negjiin_ner": "Нягтлан бодох бүртгэлийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс, Нббт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Завхан сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "8c34ae5d56e24e186cf3e04548638c5a",
+        "buttsiin_negjiin_ner": "Сургалт, оюутны алба",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс, Са",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Завхан сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "be639f733708a90d52327193b12429e9",
+        "buttsiin_negjiin_ner": "Санхүү, хангамж үйлчилгээний алба",
+        "buttsiin_negjiin_tovchlol": "МУИС, Зс, СХүа",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a511113aff475b14d8903e0cd509f2b5",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Завхан сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "a0b1f4501e754220e0316951f30fd606",
+        "buttsiin_negjiin_ner": "Экологийн Боловсролын Төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, БЛАС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "2001dd5d7506576d9133aec8a3c21210",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгаль-Эх лицей ахлах сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "c37de837a6280f484adc8aa581cfb7d7",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "b43d3f04841fc58b6e155df37be8b3f0",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Шинжлэх ухааны сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_negjiin_ner": "Байгалийн ухааны салбар",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "b43d3f04841fc58b6e155df37be8b3f0",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Шинжлэх ухааны сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "4b7262c260b956a402681f801408626f",
+        "buttsiin_negjiin_ner": "Нийгмийн ухааны салбар",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Нус",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "b43d3f04841fc58b6e155df37be8b3f0",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Шинжлэх ухааны сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_negjiin_ner": "Хүмүүнлэгийн ухааны салбар",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "b43d3f04841fc58b6e155df37be8b3f0",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Шинжлэх ухааны сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "7d76c006ef6876cdf0dc35b01de8ad69",
+        "buttsiin_negjiin_ner": "Хэрэглээний математикийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хшуис, Хмт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "2ec6cfb3aa8d211a2d1078dfbba96553",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хэрэглээний шинжлэх ухаан, инженерчлэлийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "294b0f913abe2cabdb7713934cc4f00d",
+        "buttsiin_negjiin_ner": "Электроник, холбооны инженерчлэлийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хшуис, Эхит",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "2ec6cfb3aa8d211a2d1078dfbba96553",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хэрэглээний шинжлэх ухаан, инженерчлэлийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "71c9fc47d49e39f870df6cd4b4114ede",
+        "buttsiin_negjiin_ner": "Мэдээлэл, компьютерийн ухааны тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хшуис, Мкут",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "2ec6cfb3aa8d211a2d1078dfbba96553",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хэрэглээний шинжлэх ухаан, инженерчлэлийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "ccc82f3202d8df779a51fb074f238d3e",
+        "buttsiin_negjiin_ner": "Хүрээлэн буй орчин, ойн инженерчлэлийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хшуис, Хбооит",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "2ec6cfb3aa8d211a2d1078dfbba96553",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хэрэглээний шинжлэх ухаан, инженерчлэлийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "43d0f7eb0fdf6bd818e7d7ae8b97b952",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хшуис, З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "2ec6cfb3aa8d211a2d1078dfbba96553",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хэрэглээний шинжлэх ухаан, инженерчлэлийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "efa114a58a1e11fbe5644b2268d2b0d5",
+        "buttsiin_negjiin_ner": "Хими, биологийн инженерчлэлийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Хшуис, Хбит",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "2ec6cfb3aa8d211a2d1078dfbba96553",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хэрэглээний шинжлэх ухаан, инженерчлэлийн сургууль"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "76cae8549edca2a234e57ce8b6cd7fc3",
+        "buttsiin_negjiin_ner": "Шинэ материалын хими технологийн төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус, Шмхтт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгалийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "cb260ca188c66fac4eafe115032089c1",
+        "buttsiin_negjiin_ner": "Математикийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус, Мт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгалийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "0115cebe498321acd989b171e3c5fab9",
+        "buttsiin_negjiin_ner": "Физикийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус, Фт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгалийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "42a3e619217e87c5c7792fe589c1b455",
+        "buttsiin_negjiin_ner": "Химийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус, Хт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгалийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "be873e48f7ca83586f2aacdd0d4dcfd0",
+        "buttsiin_negjiin_ner": "Биологийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус, Бт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгалийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "c97e4a03ddf1d530427110a71cf20b2e",
+        "buttsiin_negjiin_ner": "Газарзүйн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус, Гт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгалийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "6622c5425ec7f7e033eb3e73afe50e95",
+        "buttsiin_negjiin_ner": "Геологи, геофизикийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Бус, Ггт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "925b7a6736f81574fc886c783239b6fb",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Байгалийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "a5371b727140890cefc82574fab7369f",
+        "buttsiin_negjiin_ner": "Антропологи, археологийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Нус, Аат",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "4b7262c260b956a402681f801408626f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Нийгмийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "fec353261d6cc45fc9e4eafa7213532a",
+        "buttsiin_negjiin_ner": "Боловсрол, сэтгэл судлалын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Нус, Бсст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "4b7262c260b956a402681f801408626f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Нийгмийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "bdbfa901f2e2468f337809e706065a75",
+        "buttsiin_negjiin_ner": "Сэтгүүл зүй, олон нийтийн харилцааны тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Нус, Сзонхт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "4b7262c260b956a402681f801408626f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Нийгмийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "598b085bf9a90e160a1d529468b381a6",
+        "buttsiin_negjiin_ner": "Социологи, нийгмийн ажлын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Нус, Снат",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "4b7262c260b956a402681f801408626f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Нийгмийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "ee659bbc1c34466a4099ce7518fbee73",
+        "buttsiin_negjiin_ner": "Улс төр судлалын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Нус, Утст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "4b7262c260b956a402681f801408626f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Нийгмийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "dcfa87cb2f2a61269b9ff9d6f8b71098",
+        "buttsiin_negjiin_ner": "Эдийн засгийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Нус, Эзт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "4b7262c260b956a402681f801408626f",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Нийгмийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2371ecfc5d452a4cc98161561e661502",
+        "buttsiin_negjiin_ner": "Философи, шашин судлалын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус, Фшст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "b4b9045632a08a00227543c696449607",
+        "buttsiin_negjiin_ner": "Түүхийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус, Тт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "9950359b17ccabbfb77828ad17931e55",
+        "buttsiin_negjiin_ner": "Монгол хэл, хэл шинжлэлийн тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус, Мххшт",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "765aa7e7f496fb8e860a555c0746df0e",
+        "buttsiin_negjiin_ner": "Утга зохиол, урлаг судлалын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус, Узуст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "a754ec2aaf5a2e989b650ca3b40c5858",
+        "buttsiin_negjiin_ner": "Их Британи, Америк судлалын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус, ИБАст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "2e5a22ad1a6bdea6713db3f508f40a39",
+        "buttsiin_negjiin_ner": "Европ судлалын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус, Ест",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "14fa6c895fd46fa1ffa486d6c63ccd32",
+        "buttsiin_negjiin_ner": "Ази судлалын тэнхим",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хус, Аст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "7822ddec34696861559712735dd3d921",
+        "buttsiin_negjiin_ner": "Гадаад хэлний сургалтын төв",
+        "buttsiin_negjiin_tovchlol": "МУИС, Шус, Хс, Гхст",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "a3f7fbb24f95954584e846f9853ffb1e",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Хүмүүнлэгийн ухааны салбар"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "e6f75ffe749036ba5d003cbabad83910",
+        "buttsiin_negjiin_ner": "Хүн эмнэлгийн салбар",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ, ҮА, ХЭС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "6fda97d8356ff399295a2ea89db2ade1",
+        "buttsiin_negjiin_ner": "Цахилгааны хэсэг",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ, ҮА, ЦХ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "f79be3c141ba2b24402a63fa4a7f4a2d",
+        "buttsiin_negjiin_ner": "E-Номын сан",
+        "buttsiin_negjiin_tovchlol": "МУИС,З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "ded4b11ac8ef2de3c90be36d65d732d1",
+        "buttsiin_negjiin_ner": "Авто гараж",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ, ҮА, АГ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "8bb321540880296d84254ae7571c4ca1",
+        "buttsiin_negjiin_ner": "Барилгын бригад",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ, ҮА, ББ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "0d0aaf59607a21b6e9192ba8809eba2d",
+        "buttsiin_negjiin_ner": "Сантехникийн хэсэг",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ, ҮА, СХ",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "09d987f3a6ff18ff911dcb20590c30fd",
+        "buttsiin_negjiin_ner": "Оюутны 1 дүгээр байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "36f4e67074e6988176c66b6bc233c8cc",
+        "buttsiin_negjiin_ner": "Оюутны 2 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "6664bc263946ddf171c80925597ec365",
+        "buttsiin_negjiin_ner": "Оюутны 3 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "d14654d546896ec741d263750920e963",
+        "buttsiin_negjiin_ner": "Оюутны 4 дүгээр байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "dfb19a0761d019fa2b03ef692b6fda20",
+        "buttsiin_negjiin_ner": "Оюутны 5 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "c15bbfa82291ce15fe2d9a6f23dbe37b",
+        "buttsiin_negjiin_ner": "Оюутны 6 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "cd852aad9fa5d5bb95890023ec8ef292",
+        "buttsiin_negjiin_ner": "Хичээлийн 1 дүгээр байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "6ff89ea24d2ef5f2a5587921e7df6b9d",
+        "buttsiin_negjiin_ner": "Хичээлийн 2 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "6d9df8080bb7fe537569687ea7d4734e",
+        "buttsiin_negjiin_ner": "Хичээлийн 3 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "02483e700cfcdf6a97c0bb637cd1c436",
+        "buttsiin_negjiin_ner": "Хичээлийн 4 дүгээр байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "063548772a6dbb43b6d8da6a11a49f8b",
+        "buttsiin_negjiin_ner": "Хичээлийн 5 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "8b12b8d71d54e62daaf2844e7ea8180a",
+        "buttsiin_negjiin_ner": "Хичээлийн 7 дугаар байр",
+        "buttsiin_negjiin_tovchlol": "МУИС",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "fffd4314c92dff18763365fc98894fec",
+        "buttsiin_negjiin_ner": "Номын сан /үйлчилгээ/",
+        "buttsiin_negjiin_tovchlol": "МУИС, З, ХҮГ,",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "df5a978c2becf0d4b7c798719e1ab525",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Үйлчилгээний нэгж"
+    },
+    {
+        "buttsiin_negjiin_dugaar": "ec00d4d349aa942f2dcf90c8ba7c7c4e",
+        "buttsiin_negjiin_ner": "Захиргаа",
+        "buttsiin_negjiin_tovchlol": "МУИС, Атс,З",
+        "buttsiin_khariyaalagdakh_negjiin_dugaar": "0307e935b88c9d28e8bb22ef356cc4aa",
+        "buttsiin_khariyaalagdakh_negjiin_ner": "Ахисан түвшний сургууль"
+    }
+]
