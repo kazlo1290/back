@@ -71,6 +71,6 @@ else if (process.env.DB_CHOOSE == 'MYSQL') {
     FrontendCall();
 
     // listen port
-    app.listen(port, () => console.log(`Port: `.bgRed + `${port.yellow}`))
+    app.listen(port, () => console.log(`Port: `.bgYellow.black + `${port.yellow}`))
 
 };
