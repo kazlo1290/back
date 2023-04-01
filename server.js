@@ -1,76 +1,53 @@
+// modules
 const express = require('express');
+const app = express();
 const path = require('path');
-const colors = require('colors')
-const dotenv = require('dotenv').config()
-const {errorHandler} = require('./middleware/errorMiddleware')
+require('colors');
+require('dotenv').config();
 const cors = require('cors');
+// src
+const { proHandler } = require('./middleware/production');
+const { connectMongo } = require('./config/connectMongo');
+connectMongo();
 const port = process.env.PORT || 4000;
-
+const corsOptions = {
+  origin: ['*'],
+  optionsSuccessStatus: 200,
+};
+// front
 function FrontendCall() {
+  // Check Production
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, './client/dist')));
 
-    // Check Production
-    if (process.env.NODE_ENV === 'production') {
-        app.use(express.static(path.join(__dirname, './client/build')))
+    app.get('*', cors(corsOptions), (req, res) =>
+      res.sendFile(
+        path.resolve(__dirname, './', 'client', 'dist', 'index.html'),
+      ),
+    );
+  } else {
+    app.get('*', cors(corsOptions), (req, res) =>
+      res.send('set to production'),
+    );
+  }
 
-        app.get('*', cors(corsOptions), (req, res) =>
-            res.sendFile(
-                path.resolve(__dirname, './', 'client', 'build', 'index.html')
-            )
-        )
-    } else {
-        app.get('/', cors(corsOptions), (_req, res) => res.send('set to production'));
-    }
-
-    app.use(errorHandler);
-    
+  app.use(proHandler);
 }
 
 // Use
-const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
+app.use('/file', express.static('uploads'));
 
-var corsOptions = {
-    origin: [
-        "https://*.colorfully.mn",
-        "https://colorfully.mn"
-    ],
-    optionsSuccessStatus: 200
-};
+// Routes
+const apiV1 = '/api/v1/';
+app.use(`${apiV1}users`, cors(corsOptions), require('./routes/user.routes'));
+app.use(`${apiV1}posts`, cors(corsOptions), require('./routes/post.routes'));
+app.use(`${apiV1}songs`, cors(corsOptions), require('./routes/song.routes'));
 
+// Serve frontend
+// FrontendCall();
 
-// MongoDB
-if (process.env.DB_CHOOSE == 'MONGODB') {
-
-    const connectMongo = require('./config/db.js')
-    connectMongo();
-
-    // Routes
-    app.use('/users', cors(corsOptions), require('./mongo/routes/userRoutes'));
-    app.use('/posts', cors(corsOptions), require('./mongo/routes/postRoutes'));
-    app.use('/api/songs', cors(corsOptions), require('./mongo/routes/song'));
-
-    // Serve frontend
-    FrontendCall();
-
-    // listen port
-    app.listen(port, () => console.log(`Port: `.bgRed + `${port.yellow}`))
-} 
-// MysqlDB
-else if (process.env.DB_CHOOSE == 'MYSQL') {
-
-    console.log("Host: ".bgRed + process.env.DB_HOST.yellow)
-    console.log("User: ".bgRed + process.env.DB_USERNAME.yellow)
-    
-    // Routes
-    app.use('/api/v1/employee', cors(corsOptions), require('./mysql/routes/employee.route'))
-    app.use('/api/v1/user', cors(corsOptions), require('./mysql/routes/user.route'))
-    
-    // Serve frontend
-    FrontendCall();
-
-    // listen port
-    app.listen(port, () => console.log(`Port: `.bgYellow.black + `${port.yellow}`))
-
-};
+// listen port
+app.listen(port, () => console.log(`Server running on port ${port.yellow}`));
