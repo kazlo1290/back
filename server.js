@@ -47,7 +47,7 @@ app.use(`${apiV1}posts`, cors(corsOptions), require('./routes/post.routes'));
 app.use(`${apiV1}songs`, cors(corsOptions), require('./routes/song.routes'));
 
 // Serve frontend
-// FrontendCall();
+FrontendCall();
 
 // listen port
 app.listen(port, () => console.log(`Server running on port ${port.yellow}`));
